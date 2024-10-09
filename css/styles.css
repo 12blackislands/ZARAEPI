@@ -789,8 +789,7 @@ margin:auto;
 
 .scroll-wrapper, #iframe-image {
     -webkit-overflow-scrolling: touch !important;
-    overflow-y: auto !important;
-
+    overflow: scroll !important;
 }
 
 
