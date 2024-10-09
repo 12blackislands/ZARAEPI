@@ -788,19 +788,9 @@ margin:auto;
 
 
 .scroll-wrapper, #iframe-image {
-    -webkit-overflow-scrolling: touch;
-    overflow-y: scroll;
-/*    position: fixed; */
-  right: 0; 
-  bottom: 0; 
-  left: 0;
-  top: 0;
+    -webkit-overflow-scrolling: touch !important;
+    overflow-y: auto !important;
 
-/*   display: inline-block;*/
-        -webkit-overflow-scrolling: touch !important;
-        overflow-y: auto !important;
-
-    /* important:  dimensions or positioning here! */
 }
 
 
