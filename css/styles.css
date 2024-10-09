@@ -789,7 +789,7 @@ margin:auto;
 
 .scroll-wrapper, #iframe-image {
     -webkit-overflow-scrolling: touch;
-/*    overflow-y: scroll;*/
+    overflow-y: scroll;
 /*    position: fixed; */
   right: 0; 
   bottom: 0; 
@@ -797,7 +797,7 @@ margin:auto;
   top: 0;
 
 /*   display: inline-block;*/
-/*        -webkit-overflow-scrolling: touch !important;*/
+        -webkit-overflow-scrolling: touch !important;
         overflow-y: auto !important;
 
     /* important:  dimensions or positioning here! */
