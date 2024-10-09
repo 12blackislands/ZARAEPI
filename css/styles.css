@@ -743,6 +743,11 @@ color: white !important;
         background-color: black;
     border: none;
         outline: 1px black solid;
+
+  height: 100vh;
+  overflow: hidden;
+
+
 }
 
 
@@ -789,7 +794,7 @@ margin:auto;
 
 
 .scroll-wrapper, #iframe-image {
-    overflow: scroll !important;
+/*    overflow: scroll !important;*/
     /*-webkit-overflow-scrolling: touch;
     overflow-y: scroll;*/
 /*    position: fixed; */
