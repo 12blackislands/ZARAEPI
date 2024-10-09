@@ -1,0 +1,810 @@
+/* global */
+/*Euclid Circular A Trial*/
+@font-face {
+    font-family: "Euclid Circular A Trial";
+    src: url("../font/Euclid Circular A Trial/EuclidCircularATrial-Regular.otf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Euclid Circular A Trial";
+    src: url("../font/Euclid Circular A Trial/EuclidCircularATrial-Light.otf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Euclid Circular A Trial";
+    src: url("../font/Euclid Circular A Trial/EuclidCircularATrial-Medium.otf");
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Euclid Circular A Trial";
+    src: url("../font/Euclid Circular A Trial/EuclidCircularATrial-Bold.otf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+
+/*Euclid Circular B Trial*/
+@font-face {
+    font-family: "Euclid Circular B Trial";
+    src: url("../font/Euclid Circular B Trial/EuclidCircularBTrial-Bold.otf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Euclid Circular B Trial";
+    src: url("../font/Euclid Circular B Trial/EuclidCircularBTrial-Light.otf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Euclid Circular B Trial";
+    src: url("../font/Euclid Circular B Trial/EuclidCircularBTrial-Medium.otf");
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Euclid Circular B Trial";
+    src: url("../font/Euclid Circular B Trial/EuclidCircularBTrial-Regular.otf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Euclid Circular B Trial";
+    src: url("../font/Euclid Circular B Trial/EuclidCircularBTrial-Light.otf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+
+/*Schnyder Family*/
+@font-face {
+    font-family: "Schnyder Family";
+    src: url("../font/Schnyder Family/SchnyderL-Light-Trial.otf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Schnyder Family";
+    src: url("../font/Schnyder Family/SchnyderM-Light-Trial.otf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Schnyder Family";
+    src: url("../font/Schnyder Family/SchnyderS-Light-Trial.otf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Schnyder Family";
+    src: url("../font/Schnyder Family/SchnyderXL-Light-Trial.otf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+
+/*untitled sans*/
+@font-face {
+    font-family: "Test Untitled Sans";
+    src: url("../font/Test Untitled Sans/TestUntitledSans-Light.otf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+/*circularXX*/
+@font-face {
+    font-family: "CircularXX";
+    src: url("../font/CircularXX/CircularXXTrial-Bold.otf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "CircularXX";
+    src: url("../font/CircularXX/CircularXXTrial-Light.otf");
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+
+
+/*TestDomaineText*/
+@font-face {
+    font-family: "Test Domaine Text";
+    src: url("../font/Test Domaine Text/TestDomaineText-Light.otf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+
+/*bradford*/
+@font-face {
+    font-family: "Bradford LL";
+    src: url("../font/Bradford LL/Bradford LL - Latin - Desktop Fonts/OpenType OTF/Fonts/BradfordTrial-Light.otf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+
+/*Schnyder Family Italic Light*/
+/*@font-face {
+    font-family: "Schnyder Family";
+    src: url("../font/Schnyder Family/SchnyderL-LightItalic-Trial.otf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Schnyder Family";
+    src: url("../font/Schnyder Family/SchnyderM-LightItalic-Trial.otf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Schnyder Family";
+    src: url("../font/Schnyder Family/SchnyderS-LightItalic-Trial.otf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Schnyder Family";
+    src: url("../font/Schnyder Family/SchnyderXL-LightItalic-Trial.otf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: none;
+}
+
+
+.body-overflow {
+   overflow: hidden;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+ a:link {
+      text-decoration: none;
+/*      color:black !important;*/
+        color:#28282a;
+}
+
+a:visited {
+      text-decoration: none;
+/*      color:black;*/
+     color:#28282a;
+
+}
+
+a:hover {
+      text-decoration: none;
+/*      color:black;*/
+     color:#28282a;
+}
+
+
+a:active {
+      text-decoration: none;
+/*      color:black;*/
+     color:#28282a;
+}
+
+
+
+body {
+/*    font-family: "CircularStd" !important;*/
+    overflow-x: hidden;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+/*All devices and mobile phone*/
+
+/*All devices and mobile phone*/
+body:before {
+/*  content: 'mobile';*/
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  padding: 0.5em;
+  right: 0;
+  top: 0;
+  color: white;
+  z-index: 1;
+}
+
+.menu-container {
+    position: relative;
+   /* width: 200px;
+    margin: 50px auto; */
+/*    outline: 1px green solid;*/
+    width:100%;
+    margin:auto;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+    position:fixed;
+    z-index:100;
+}
+
+
+
+#hamburger {
+  width: 3.2em;
+  height: 2em;
+/*  position: absolute;*/
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  margin-top: 3em;
+  left: 84%;
+/*  z-index:30;*/
+  position:fixed;
+}
+
+
+#hamburger span.fixed {
+  background: #00B0FC;
+}
+
+
+#hamburger span {
+  display: block;
+  position: absolute;
+  height: 0.1em;
+  width: 100%;
+  background: #193441;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+#hamburger span:nth-child(1) {
+  top: 0px;
+}
+#hamburger span:nth-child(2) {
+  top: 0.4em;
+}
+#hamburger span:nth-child(3) {
+  top: 0.8em;
+}
+
+#hamburger.open span:nth-child(1) {
+  top: 18px;
+  transform: rotate(135deg);
+}
+#hamburger.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+#hamburger.open span:nth-child(3) {
+  top: 18px;
+  transform: rotate(-135deg);
+}
+
+.dropdown {
+    max-height: 0; /* Hide by default */
+    overflow: hidden; /* Prevent overflow during transition */
+/*    background-color: #EEEAE3;*/
+/*    background-color: #006dff;*/
+    background-color: white;
+
+/*    border: 1px solid #ccc;*/
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Apply cubic-bezier */
+    height:100vh;
+}
+
+
+
+.dropdown.active {
+    max-height: 100vh; /* Show the dropdown */
+    z-index:80;
+    position:fixed;
+    display:block;
+    overflow: hidden;
+/*    height:100vh;*/
+}
+
+.menu-item a, .menu-item a:hover, .menu-item a:active, .menu-item a:focus {
+/*  background-color: rgba(0, 0, 0, 0);*/
+  color: black;
+  font-weight: 300;
+  font-size: 5em;
+ font-family:'Schnyder Family' ;
+ border:none;
+ text-decoration:none;
+/* font-style:italic;*/
+ line-height:1em;
+ letter-spacing:-.2rem;
+
+}
+
+.hamburger.open .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .line:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+}
+
+.hamburger.open .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.section{
+     overflow: hidden;
+     width:100%;
+     margin:auto;
+}
+
+
+
+/*the top menu box when on scroll they are fixed*/
+.section-one-background-color{   
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    position: fixed;
+    z-index: 50;
+}
+
+
+/*section-one*/
+.section-one{
+    width:95%;
+    height:6em;
+    margin:auto;
+/*    outline:1px pink solid;*/
+/*    background-color:#ffd00a;*/
+/*    background-color:white;*/
+
+
+}
+
+
+.logo-name{
+    width: 5em;
+    font-size: 2.3em;
+    color: black;
+    font-family: 'Schnyder Family';
+/*    font-family: 'BradfordLLTrialWeb-Light';*/
+/*    font-family:CircularXX;*/
+    font-style: normal ;
+    font-weight: 300;
+    line-height: 0.8em;
+    padding-top: 1.2em;
+    position:fixed;
+/*    z-index:10;*/
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/*section-two container*/
+.section-two-background-color, .section-three-background-color, .section-four-background-color, 
+.section-five-background-color{
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+    background-color: white;
+   /* position: fixed;
+    z-index: 50;*/
+}
+
+.footer-background-color{
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+}
+
+.section-two{
+    width:95%;
+    margin:auto;
+/*    outline: 1px pink solid;*/
+    height: 45em;
+    margin-top:10em;
+}
+
+.section-three, .section-four, .section-five{
+    width:95%;
+    margin:auto;
+/*    outline: 1px pink solid;*/
+    height: 45em;
+   
+}
+
+
+.footer-section{
+    width:95%;
+    margin:auto;
+/*    outline: 1px pink solid;*/
+    height: 30em;
+
+}
+
+.contact{
+    color:white;
+/*       font-family: 'Schnyder Family'; */
+/*       font-family: 'Euclid Circular A Trial';*/
+       font-family:CircularXX;
+     font-size:1.5em;
+     padding-top:4em;
+     font-weight:200;
+      letter-spacing: .02em;
+/*      line-height:0.8em;*/
+
+
+}
+
+
+#email{
+    color:white;
+/*       font-family: 'Schnyder Family'; */
+       font-family: 'Euclid Circular A Trial';
+     font-size:1.5em;
+     padding-top:1em;
+     font-weight:200;
+      letter-spacing: .02em;
+/*      line-height:0.8em;*/
+text-decoration:underline;
+color: white !important;
+
+
+}
+
+#email a, .email a{
+    color:white !important;
+}
+
+
+#behance, .behance a{
+    color:white !important;
+    text-decoration:underline;
+}
+
+.email-link, .email{
+    color:white !important;
+}
+
+
+
+.title{
+    font-size: 1.5em;
+   color:#28282a;
+    /* font-family: 'Schnyder Family'; */
+/*    font-family: 'Euclid Circular A Trial';*/
+/*    font-family:Test Untitled Sans;*/
+    font-family:Test Domaine Text;
+    /* font-style: italic; */
+    font-weight: 300;
+/*    letter-spacing: .02em;*/
+    line-height: 1.2em;
+    padding-bottom:.5em;
+    z-index:100;
+}
+
+
+
+.image-title-two{
+    font-size: 5em;
+    color: white;
+     font-family: 'Schnyder Family'; 
+    font-weight: 300;
+    letter-spacing: .02em;
+    text-align:center;
+    padding-top:2.3em;
+
+}
+
+.image-title-three{
+    font-size: 5em;
+    color: white;
+     font-family: 'Schnyder Family'; 
+    font-weight: 300;
+    letter-spacing: .02em;
+    text-align:center;
+     padding-top:2.3em;
+}
+
+
+
+.image-title-four{
+    font-size: 5em;
+    color: white;
+     font-family: 'Schnyder Family'; 
+    font-weight: 300;
+    letter-spacing: .02em;
+    text-align:center;
+     padding-top:2.3em;
+}
+
+
+
+.image-title-five{
+    font-size: 5em;
+    color: white;
+     font-family: 'Schnyder Family'; 
+    font-weight: 300;
+    letter-spacing: .02em;
+    text-align:center;
+     padding-top:2.3em;
+}
+
+
+
+
+
+.background-image {
+  background-repeat: no-repeat;
+/*  background-attachment: fixed;*/
+  background-size: cover;
+  width: 100%;
+  background-position-x: 50%;
+}
+
+
+
+/*
+.background-image {
+  filter: gray; 
+  -webkit-filter: grayscale(1); 
+  filter: grayscale(1);
+}
+
+*/
+
+.image-two{
+  background-image: url('../image/aut-diamond.jpg');
+  background-repeat: no-repeat;
+/*  background-attachment: fixed;*/
+/*  background-size: cover;*/
+/*  width: 100%;*/
+  /*background-position-x: 20%;
+  background-position-y: 50%;*/
+  height: 20em;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  position: absolute;
+  /*    margin-top: 10em;*/
+   left:0;
+  background-position: center center;
+}
+
+
+.image-three{
+  background-image: url('../image/fonterra.jpg');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  background-position-x: 20%;
+  background-position-y: 50%;*/
+  height: 30em;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  position: absolute;
+  /*    margin-top: 10em;*/
+   left:0;
+  /*background-position: center center;*/
+}
+
+
+.image-four{
+  background-image: url('../image/sparc.jpg');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  background-position-x: 20%;
+  background-position-y: 50%;*/
+  height: 30em;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  position: absolute;
+  /*    margin-top: 10em;*/
+   left:0;
+  /*background-position: center center;*/
+}
+
+
+.image-five{
+  background-image: url('../image/vodafone.jpg');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  background-position-x: 20%;
+  background-position-y: 50%;*/
+  height: 30em;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  position: absolute;
+  /*    margin-top: 10em;*/
+   left:0;
+  /*background-position: center center;*/
+}
+
+
+
+
+
+.project-title{
+    padding-top:10em;
+    font-family: 'CircularXX';
+    font-size:3em;
+
+}
+
+
+.paragraph{
+    font-family: 'Test Domaine Text';
+    font-size:1em;
+
+}
+
+
+
+#iframepillow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
+.iframe-container{
+    width:100%;
+    margin:auto;
+        background-color: black;
+    border: none;
+        outline: 1px black solid;
+}
+
+
+
+ .floating-text-container{
+    /*width:90%;
+    margin:auto;*/
+    position:absolute;
+    margin-top:10em;
+ }
+
+
+.floating-text {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 3em;
+    font-family: 'Schnyder Family';
+/*    position: absolute;*/
+  width:95%;
+margin:auto;
+      /* z-index: 60; */
+    /* margin-top: -8em; */
+    font-style: italic;
+    /*width: 80%;
+    left: 0.2em;*/
+        padding-bottom: 0.4em;
+}
+
+
+#text-1, #text-2, #text-3, #text-4{
+    line-height:0.8em;
+}
+
+
+#text{
+    color:white;
+}
+
+/*for small tablet - inclusive*/
+@media only screen and (min-width:40em) {
+    /* body:before {
+        content: 'tablet';
+        background-color: rgba(0, 0, 0, 0.2);
+        position: fixed;
+        padding: 0.5em;
+        right: 0;
+        top: 0;
+    } */
+
+
+    /*for tablet/small laptop - inclusive*/
+@media only screen and (min-width:60em) {
+    /* body:before {
+        content: 'laptop';
+        background-color: rgba(0, 0, 0, 0.2);
+        position: fixed;
+        padding: 0.5em;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+    } */
+
+
+    /*for destop - inclusive*/
+@media only screen and (min-width:80em) {
+  /*   body:before {
+        content: 'desktop';
+        background-color: rgba(0, 0, 0, 0.2);
+        position: fixed;
+        padding: 0.5em;
+        right: 0;
+        top: 0;
+    } */
