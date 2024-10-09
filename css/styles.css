@@ -107,6 +107,14 @@
 
 
 
+@font-face {
+    font-family: "Schnyder Family";
+    src: url("../font/Schnyder Family/SchnyderL-Demi-Trial.otf");
+    font-weight: 600;
+    font-style: normal;
+}
+
+
 
 /*untitled sans*/
 @font-face {
@@ -753,7 +761,7 @@ background-attachment: fixed;
 
 .floating-text {
     color: #ffffff;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 3em;
     font-family: 'Schnyder Family';
 /*    position: absolute;*/
@@ -776,6 +784,19 @@ margin:auto;
 #text{
     color:white;
 }
+
+
+
+.scroll-wrapper {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+
+    /* important:  dimensions or positioning here! */
+}
+
+
+
+
 
 /*for small tablet - inclusive*/
 @media only screen and (min-width:40em) {
