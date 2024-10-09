@@ -735,9 +735,12 @@ color: white !important;
         background-color: black;
     border: none;
         outline: 1px black solid;
-    
 }
 
+
+#iframe-image{
+background-attachment: fixed;
+}
 
 
  .floating-text-container{
@@ -750,7 +753,7 @@ color: white !important;
 
 .floating-text {
     color: #ffffff;
-    font-weight: 300;
+    font-weight: 700;
     font-size: 3em;
     font-family: 'Schnyder Family';
 /*    position: absolute;*/
