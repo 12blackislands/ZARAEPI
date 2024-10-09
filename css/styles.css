@@ -753,7 +753,7 @@ color: white !important;
 
     /* Ensure iframe container allows scroll */
     .iframe-container {
-      position: relative;
+/*      position: relative;*/
       width: 100vw;
       height: 100vh;
     }
@@ -766,15 +766,16 @@ background-attachment: fixed;
  .floating-text-container{
     /*width:90%;
     margin:auto;*/
-    position:absolute;
+/*    position:absolute;*/
     margin-top:10em;
-    z-index:50 !important;
+/*    z-index:50 !important;*/
  }
 
 
 .floating-text {
-    color: #ffffff;
-    font-weight: 500;
+/*    color: #ffffff;*/
+    color:black;
+    font-weight: 200;
     font-size: 3em;
     font-family: 'Schnyder Family';
 /*    position: absolute;*/
@@ -795,13 +796,13 @@ margin:auto;
 
 
 #text{
-    color:white;
+    color:black;
 }
 
 
 
 .scroll-wrapper {
-    position: relative;
+/*    position: relative;*/
     height: 100vh;
     overflow: hidden; /* Allow the iframe to scroll independently */
   }
@@ -818,16 +819,16 @@ margin:auto;
 
   /* Floating text styling */
   .floating-text-container {
-    position: absolute;
-    top: 10px;
+/*    position: absolute;*/
+   /* top: 10px;
     left: 10px;
-    z-index: 10;
+    z-index: 10;*/
   }
 
 
 
   .floating-text a {
-    color: white;
+    color: black;
     font-size: 1em;
     text-decoration: none;
     display: block;
@@ -838,7 +839,7 @@ margin:auto;
 
 /* Scrollable iframe */
     #iframe-image {
-      position: absolute;
+/*      position: absolute;*/
       top: 0;
       left: 0;
       width: 100%;
@@ -846,8 +847,25 @@ margin:auto;
       overflow: auto;
       -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
       background-color: transparent;
-      z-index: -1;
+/*      z-index: -1;*/
     }
+
+
+
+
+
+#text-1, #text-2, #text-3, #text-4 {
+    line-height: 0.8em;
+    border-bottom: 1px black solid;
+    /* width: 100%; */
+    /* margin: auto; */
+    padding-bottom: 0.1em;
+    padding-top: 0.5em;
+    /* border-top: 1em;
+
+
+}
+
 
 
 
