@@ -140,6 +140,14 @@
 }
 
 
+@font-face {
+    font-family: "CircularXX";
+    src: url("../font/CircularXX/CircularXXTrial-Regular.otf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 
 
 /*TestDomaineText*/
@@ -149,6 +157,15 @@
     font-weight: 300;
     font-style: normal;
 }
+
+
+@font-face {
+    font-family: "Test Domaine Text";
+    src: url("../font/Test Domaine Text/TestDomaineText-Regular.otf");
+    font-weight: 400;
+    font-style: normal;
+}
+
 
 
 
@@ -383,6 +400,13 @@ body:before {
 /*    height:100vh;*/
 }
 
+
+
+
+.menu-group{
+    padding-top:7em;
+}
+
 .menu-item a, .menu-item a:hover, .menu-item a:active, .menu-item a:focus {
 /*  background-color: rgba(0, 0, 0, 0);*/
   color: black;
@@ -391,7 +415,7 @@ body:before {
  font-family:'Schnyder Family' ;
  border:none;
  text-decoration:none;
-/* font-style:italic;*/
+ font-style:italic;
  line-height:1em;
  letter-spacing:-.2rem;
 
@@ -425,6 +449,7 @@ body:before {
     background-color: white;
     position: fixed;
     z-index: 50;
+    outline: 1px black solid;
 }
 
 
@@ -448,7 +473,7 @@ body:before {
     font-family: 'Schnyder Family';
 /*    font-family: 'BradfordLLTrialWeb-Light';*/
 /*    font-family:CircularXX;*/
-    font-style: normal ;
+    font-style: italic;
     font-weight: 300;
     line-height: 0.8em;
     padding-top: 1.2em;
@@ -470,7 +495,7 @@ body:before {
 }
 
 .footer-background-color{
-    background-color: black;
+    background-color:#03FF5B;
     overflow: hidden;
     width: 100%;
     margin: auto;
@@ -502,67 +527,73 @@ body:before {
 }
 
 .contact{
-    color:white;
+    color:black;
 /*       font-family: 'Schnyder Family'; */
 /*       font-family: 'Euclid Circular A Trial';*/
-       font-family:CircularXX;
+       font-family:'Test Domaine Text';
      font-size:1.5em;
      padding-top:4em;
      font-weight:200;
-      letter-spacing: .02em;
+/*      letter-spacing: .02em;*/
+        letter-spacing: -.05em;
 /*      line-height:0.8em;*/
+/*font-weight:400;*/
 
 
 }
 
 
 #email{
-    color:white;
+    color:black;
 /*       font-family: 'Schnyder Family'; */
-       font-family: 'Euclid Circular A Trial';
+       font-family: 'Test Domaine Text';
      font-size:1.5em;
      padding-top:1em;
      font-weight:200;
-      letter-spacing: .02em;
+/*      letter-spacing: .02em;  */
+      letter-spacing: -.05em;
 /*      line-height:0.8em;*/
 text-decoration:underline;
-color: white !important;
+color: black !important;
+/*font-weight:400;*/
 
 
 }
 
 #email a, .email a{
-    color:white !important;
+    color:black !important;
 }
 
 
 #behance, .behance a{
-    color:white !important;
+    color:black !important;
     text-decoration:underline;
 }
 
 .email-link, .email{
-    color:white !important;
+    color:black!important;
 }
 
 
 
-.title{
-    font-size: 1.5em;
-   color:#28282a;
+.title {
+    font-size: 1.4em;
+    color: #28282a;
     /* font-family: 'Schnyder Family'; */
-/*    font-family: 'Euclid Circular A Trial';*/
-/*    font-family:Test Untitled Sans;*/
-    font-family:Test Domaine Text;
+    /* font-family: 'Euclid Circular A Trial'; */
+    /* font-family: Test Untitled Sans; */
+    font-family: Test Domaine Text;
     /* font-style: italic; */
     font-weight: 300;
-/*    letter-spacing: .02em;*/
+    letter-spacing: -.05em;
     line-height: 1.2em;
-    padding-bottom:.5em;
-    z-index:100;
+    padding-bottom: .5em;
+    z-index: 100;
+    width: 95%;
+    margin: auto;
+    margin-top: -0.5em;
+
 }
-
-
 
 .image-title-two{
     font-size: 5em;
@@ -738,13 +769,13 @@ color: white !important;
 
 
 .iframe-container{
-    width:100%;
+/*    width:100%;*/
     margin:auto;
 /*        background-color: black;*/
     border: none;
         outline: 1px black solid;
 
-  height: 100vh;
+/*  height: 100vh;*/
   overflow: hidden;
 
 
@@ -754,8 +785,10 @@ color: white !important;
     /* Ensure iframe container allows scroll */
     .iframe-container {
 /*      position: relative;*/
-      width: 100vw;
-      height: 100vh;
+    /*  width: 100vw;
+      height: 100vh;*/
+     width: 100%;
+    height: 53em;
     }
 
 /*#iframe-image{
@@ -767,7 +800,7 @@ background-attachment: fixed;
     /*width:90%;
     margin:auto;*/
 /*    position:absolute;*/
-    margin-top:10em;
+    margin-top:5em;
 /*    z-index:50 !important;*/
  }
 
@@ -856,17 +889,47 @@ margin:auto;
 
 #text-1, #text-2, #text-3, #text-4 {
     line-height: 0.8em;
-    border-bottom: 1px black solid;
+/*    border-bottom: 1px black solid;*/
     /* width: 100%; */
     /* margin: auto; */
     padding-bottom: 0.1em;
     padding-top: 0.5em;
-    /* border-top: 1em;
+    }
 
 
+
+
+
+.border-bottom {
+    outline: .1px black solid;
+    width: 100%;
+    margin-top: 0.5em;
 }
 
 
+/* Moving Image Styles */
+.moving-image-container {
+  width: 1000px;
+  position: relative;
+/*  height: 150px; */
+  /* Image container height */
+  margin-top:6.1em;
+}
+
+.moving-image {
+  position: absolute;
+  animation: horizontalMove 50s linear infinite; /* Infinite horizontal movement */
+      border-bottom: 1.5px black solid;
+}
+
+@keyframes horizontalMove {
+  0% {
+    margin-left: -500px; /* Start off-screen from the left */
+  }
+  100% {
+    margin-left: -7000px; /* Move completely off-screen to the right */
+  }
+}
 
 
 
