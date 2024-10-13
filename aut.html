@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<div class="menu-container">
+	 <div class="menu-container">
         <div class="hamburger" id="hamburger">
            <!--  <div class="line"></div>
             <div class="line"></div>
@@ -17,7 +17,7 @@
 			<span></span>
         </div>
         <div class="dropdown" id="dropdown">
-            <ul>
+            <ul class="menu-group">
             	<li class="menu-item"><a href="#" data-to="" class="menu-link">HOME</a></li>
 				<li class="menu-item"><a href="#" data-to="" class="menu-link">WORK</a></li>
 				<li class="menu-item"><a href="#" data-to="" class="menu-link">CONTACT</a></li>
@@ -39,6 +39,38 @@
 		</div>
 	</div>
 </div>
+
+
+ <!-- Close Button -->
+  <button class="close-button" id="closeBtn"><a href="index.html">X</a></button>
+ 
+
+  <!-- Main Project Container -->
+  <div class="project-container" id="project">
+    <img src="./image/aut-proto.png" alt="Project Image" class="project-image" id="projectImage">
+    
+    <div class="project-title" id="projectTitle">Project Info    
+    <div class="project-info" id="projectInfo">
+      <p>This project showcases a modern design with smooth transitions for an engaging user experience.</p>
+    </div>
+  </div>
+</div>
+
+
+ <!-- New Section with Dropdown and Moving Image -->
+  <div class="new-section">
+    <div class="dropdown-title" id="mainTitle">
+      <span class="dropdown-icon" id="dropdownIcon">▼</span> More Information
+    </div>
+    <div class="dropdown-content" id="dropdownContent">
+      <p>Here is additional information about the project. We aim to demonstrate how animations and interactivity can enhance user engagement.</p>
+      <div class="moving-image-container">
+        <img src="./image/loop.png" class="moving-image" id="movingImage" alt="Moving Image">
+      </div>
+    </div>
+  </div>
+
+
 
 
 

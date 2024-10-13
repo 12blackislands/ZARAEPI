@@ -1,5 +1,36 @@
 /* global */
 /*Euclid Circular A Trial*/
+
+
+
+/* Slide-up container */
+#slide-up-container {
+    position: fixed;
+    top: 100vh; 
+    /* Initially off-screen */
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: black; /* Pink background for the container */
+    z-index: 9999; /* Ensure it appears above everything */
+    transition: top 0.6s ease; 
+    /* Smooth transition for sliding up */
+    margin: auto; /* Center the container */
+    transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+/*    transition: all 0.9s cubic-bezier(0.36, 0.87, 0.79, 0.22);*/
+     /* Apply cubic-bezier */
+    
+    
+}
+
+/* When the container is activated */
+#slide-up-container.active {
+    top: 0; /* Slide it to the top of the viewport */
+}
+
+
+
+
 @font-face {
     font-family: "Euclid Circular A Trial";
     src: url("../font/Euclid Circular A Trial/EuclidCircularATrial-Regular.otf");
@@ -237,6 +268,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Cubic-bezier transition */
 }
 
 
@@ -522,7 +554,7 @@ body:before {
     width:95%;
     margin:auto;
 /*    outline: 1px pink solid;*/
-    height: 43em;
+    height: 35em;
 
 }
 
@@ -930,6 +962,130 @@ margin:auto;
     margin-left: -7000px; /* Move completely off-screen to the right */
   }
 }
+
+
+
+/*aut.html*/
+
+.project-container {
+  margin: 0 auto;
+  width: auto;
+  position: relative;
+  padding-top: 6em;
+
+}
+
+.close-button {
+  position: fixed;
+  top: 3em;
+  left: 20px;
+  font-size: 40px;
+  background-color: #03ff5b;
+  border: none;
+  color: #03FF5B;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+   z-index:5;
+}
+
+.close-button:hover {
+  transform: rotate(90deg); /* Rotate the 'X' on hover */
+}
+
+.project-image {
+  width: 100%;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1); /* Smooth transition for image */
+}
+
+.project-title {
+  cursor: pointer;
+/*  margin-top: 15px;*/
+  font-size: 24px;
+  font-weight: bold;
+  padding-top:1em;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1); /* Smooth movement and fade */
+}
+
+.project-info {
+  opacity: 0; /* Start invisible */
+  transform: translateY(20px); /* Start below the original position */
+  display: none; /* Initially hidden */
+}
+
+.open .project-info {
+  display: block; /* Make visible */
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Slide up to its original position */
+}
+
+.shrink .project-image {
+  transform: scale(0.6); /* Scale down to 60% */
+}
+
+/* Slide title up using JS, but it will remain visible */
+.slide-up-title {
+  transform: translateY(-30px); /* Slide title up */
+}
+
+/* New Section Styles */
+.new-section {
+  margin-top: 40px;
+}
+
+.dropdown-title {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-icon {
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.open-dropdown .dropdown-icon {
+  transform: rotate(180deg); /* Rotate icon when open */
+}
+
+.dropdown-content {
+  transition: opacity 0.5s ease;
+  display: none; /* Initially hidden */
+  opacity: 0; /* Start invisible */
+}
+
+.show-dropdown {
+  display: block; /* Show the dropdown */
+  opacity: 1; /* Fade in */
+}
+
+/* Moving Image Styles */
+.moving-image-container-2 {
+  width: 1000px;
+  position: relative;
+  height: 150px; /* Image container height */
+}
+
+.moving-image-2 {
+  position: absolute;
+  animation: horizontalMove 50s linear infinite; /* Infinite horizontal movement */
+}
+
+@keyframes horizontalMove {
+  0% {
+    margin-left: -500px; /* Start off-screen from the left */
+  }
+  100% {
+    margin-left: -7000px; /* Move completely off-screen to the right */
+  }
+}
+
+
+
+
 
 
 
