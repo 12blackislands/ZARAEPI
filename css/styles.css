@@ -858,6 +858,7 @@ a{
     font-style: normal;
     letter-spacing: -.03em;
     line-height: 1.125;
+    color: black !important;
   
 
 }
@@ -865,11 +866,18 @@ a{
 
 
 .info-button-compartment{
-width:95%;
+width:100%;
 margin:auto;
 /*outline: 1px pink solid;*/
 }
 
+
+
+.info-button-compartment-new-section{
+    margin:auto;
+/*    width:95%;*/
+
+}
 
 button{
 background:transparent;
@@ -917,7 +925,7 @@ border:none;
             margin: 50px; /* Space around the new section */
             text-align: left; /* Center-align text in the new section */
                 border-bottom: 1px black solid;
-    width: 100%;
+    width: 97%;
     margin: auto;
         }
 
