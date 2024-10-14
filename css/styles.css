@@ -432,7 +432,7 @@ body:before {
     color:black;
 /*       font-family: 'Schnyder Family'; */
 /*       font-family: 'Euclid Circular A Trial';*/
-       font-family:'Test Domaine Text';
+       font-family:'Test Domaine Text' !important;
      font-size:1.5em;
      padding-top:4em;
      font-weight:200;
@@ -448,7 +448,7 @@ body:before {
 #email{
     color:black;
 /*       font-family: 'Schnyder Family'; */
-       font-family: 'Test Domaine Text';
+       font-family: 'Test Domaine Text' !important;
      font-size:1.5em;
      padding-top:1em;
      font-weight:200;
@@ -484,7 +484,7 @@ color: black !important;
     /* font-family: 'Schnyder Family'; */
     /* font-family: 'Euclid Circular A Trial'; */
     /* font-family: Test Untitled Sans; */
-    font-family: Test Domaine Text;
+    font-family: 'Test Domaine Text' !important ;
     /* font-style: italic; */
     font-weight: 300;
     letter-spacing: -.05em;
@@ -510,14 +510,14 @@ color: black !important;
 
 .project-title{
     padding-top:10em;
-    font-family: 'CircularXX';
+    font-family: 'CircularXX' !important;
     font-size:2em;
 
 }
 
 
 .paragraph{
-    font-family: 'Test Domaine Text';
+    font-family: 'Test Domaine Text' !important;
    font-size:24px;
     letter-spacing: -.03em;
     line-height: 1.125;
@@ -829,11 +829,13 @@ a{
 
 .compartment-chair {
     position: relative;
-    display: inline-block;
+/*    display: inline-block;*/
     overflow: hidden; /* Ensures the image is cropped if it scales down */
     text-align: left; /* Center-aligns button and paragraph */
         border-bottom: 1px black solid;
         padding-top:6em;
+            margin: auto;
+    width: 400px;
 }
 
 .chair-image {
@@ -847,7 +849,7 @@ a{
 
 .info-button {
     margin-top: 10px; /* Space between image and button */
-    font-family: "CircularXX";
+    font-family: "CircularXX" !important;
     
     font-weight: 700;
     font-style: normal;
@@ -896,7 +898,7 @@ border:none;
     margin: 10px 0; /* Space around the paragraph */
     font-size: 1.4em; /* Adjust font size as needed */
     color: #333; /* Change text color as needed */
-    font-family:"Test Domaine Text";
+    font-family:"Test Domaine Text" !important;
     font-weight: 300;
     font-style: normal;
     letter-spacing: -.03em;
