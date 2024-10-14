@@ -875,7 +875,8 @@ margin:auto;
 
 .info-button-compartment-new-section{
     margin:auto;
-/*    width:95%;*/
+    width:97%;
+    border-bottom:1px black solid;
 
 }
 
@@ -883,6 +884,7 @@ button{
 background:transparent;
 border:none;
 /*border-bottom:1px black solid;*/
+color:black !important;
 }
 
 
@@ -924,8 +926,8 @@ border:none;
         .new-section {
             margin: 50px; /* Space around the new section */
             text-align: left; /* Center-align text in the new section */
-                border-bottom: 1px black solid;
-    width: 97%;
+/*                border-bottom: 1px black solid;*/
+    width: 100%;
     margin: auto;
         }
 
