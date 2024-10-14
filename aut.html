@@ -1,13 +1,16 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>aut work</title>
+	<title></title>
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-	 <div class="menu-container">
+ <div class="menu-container">
         <div class="hamburger" id="hamburger">
            <!--  <div class="line"></div>
             <div class="line"></div>
@@ -31,6 +34,8 @@
     </div>
 
 
+
+
 <!-- section-one top menu container --> 
 <div class="section">    
 	<div class="section-one-background-color">
@@ -40,55 +45,61 @@
 	</div>
 </div>
 
+ <!-- <button class="close-button"><a href="index.html">&times;</a></button> -->
+ <!-- Close button positioned here -->
+
 
  <!-- Close Button -->
-  <button class="close-button" id="closeBtn"><a href="index.html">X</a></button>
- 
+ <div class="close-bar">
+    <a href="index.html" class="close-button">
+        <span class="product__close-bar" id="close-bar-color"><span class="product__close-background"></span></span>
+        <span class="product__close-bar" id="close-bar-color"><span class="product__close-background"></span></span>
+    </a>
+</div>
 
-  <!-- Main Project Container -->
-  <div class="project-container" id="project">
-    <img src="./image/aut-proto.png" alt="Project Image" class="project-image" id="projectImage">
-    
-    <div class="project-title" id="projectTitle">Project Info    
-    <div class="project-info" id="projectInfo">
-      <p>This project showcases a modern design with smooth transitions for an engaging user experience.</p>
+  
+
+
+
+
+
+
+
+<div class="compartment-chair">
+    <img src="./image/sparc.jpg" alt="Compartment Chair" class="chair-image">
+    <div class="info-button-compartment">
+    <button class="info-button">Project info</button>
+    <div class="info-container">
+        <p class="info-paragraph">This is a description of the compartment chair. It provides details about its features and benefits.</p>
     </div>
-  </div>
+</div>
 </div>
 
 
- <!-- New Section with Dropdown and Moving Image -->
-  <div class="new-section">
-    <div class="dropdown-title" id="mainTitle">
-      <span class="dropdown-icon" id="dropdownIcon">▼</span> More Information
+
+<!-- New Section -->
+    <div class="new-section">
+        <!-- <h2>New Section Title</h2> -->
+        <div class="info-button-compartment">
+        <button class="info-button new-info-button">Project goal</button>
+        <div class="info-container new-info-container">
+            <p class="info-paragraph">This is additional information about the new section. It gives insights into its purpose and details.</p>
+        </div>
     </div>
-    <div class="dropdown-content" id="dropdownContent">
-      <p>Here is additional information about the project. We aim to demonstrate how animations and interactivity can enhance user engagement.</p>
-      <div class="moving-image-container">
-        <img src="./image/loop.png" class="moving-image" id="movingImage" alt="Moving Image">
-      </div>
-    </div>
-  </div>
+</div>
 
 
 
-
-
-<!-- put the back icon div above here to go back dont forget -->
-<div class="project-title">Problem statement</div>
-<div class="paragraph">These projects involved everything from initial discovery workshops, where I led research and interviews, to designing prototypes, usability testing, and successful product delivery, generating measurable impact. These projects generated measurable impact, such as achieving a 300% ROI for Fonterra’s B2B platform, contributing to $500 million in ingredient sales, and securing $15 million in research funding for the University of Auckland.</div>
+   <!-- <div id="slide-up-container"></div> -->
+     <!-- Slide-up Container (Hidden by default) -->
+    <div id="slide-up-container"></div>
 
 
 <script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.3/popup.min.js"></script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
