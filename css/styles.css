@@ -444,9 +444,9 @@ body:before {
     font-size: 24px;
     color: #333;
     font-family: "Test Domaine Text" !important;
-    font-weight: 300;
+    font-weight: 200;
     font-style: normal;
-    letter-spacing: -.03em;
+    letter-spacing: -.05em;
     line-height: 1.125;
    
 }
