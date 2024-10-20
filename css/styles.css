@@ -1,8 +1,4 @@
 /* global */
-/*Euclid Circular A Trial*/
-
-
-
 
 
 /*Schnyder Family*/
@@ -102,42 +98,6 @@
 
 
 
-
-
-
-
-/*Schnyder Family Italic Light*/
-/*@font-face {
-    font-family: "Schnyder Family";
-    src: url("../font/Schnyder Family/SchnyderL-LightItalic-Trial.otf");
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Schnyder Family";
-    src: url("../font/Schnyder Family/SchnyderM-LightItalic-Trial.otf");
-    font-weight: 300;
-    font-style: normal;
-}
-
-
-@font-face {
-    font-family: "Schnyder Family";
-    src: url("../font/Schnyder Family/SchnyderS-LightItalic-Trial.otf");
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Schnyder Family";
-    src: url("../font/Schnyder Family/SchnyderXL-LightItalic-Trial.otf");
-    font-weight: 300;
-    font-style: normal;
-}
-
-
-*/
 
 
 
@@ -411,6 +371,129 @@ body:before {
 
 
 
+/*------project section on index.html page----------*/
+
+
+/* Initial state of the slide-up container */
+#blackslideup {
+    width: 100%;
+    height: 0; /* Hidden initially */
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    transition: height 0.8s ease-in-out; 
+    /* Animation duration */
+/*    transition: top 0.6s cubic-bezier(0.4, 0, 0.2, 1); */
+    /* Smooth transition */
+    overflow: hidden;
+}
+
+/* When active, the container will have a visible height */
+#blackslideup.active {
+    height: 100vh; /* Full screen height on slide-up */
+}
+
+/* Style for the clickable link */
+.project__click {
+   /* font-family: 'CircularXX';
+    font-size: 2em;
+    color: black;*/
+/*    position: absolute;*/
+    background: none;
+    border: none;
+/*    font-size: 44px; */
+    /* Adjust font size for a thinner look */
+    cursor: pointer;
+/*    z-index: 10;*/
+    margin-top: 5em;
+}
+
+.project_section {
+/*    height: 30em;*/
+/*    outline: 1px pink solid;*/
+    width:100%;
+    margin:auto;
+    margin-top:12em;
+}
+
+.container{
+    margin-top:3.5em;
+
+
+}
+
+
+.project-main-title{
+    font-family: "Schnyder Family";
+    font-weight: 300;
+    font-size:3em;
+    color:black;
+    font-style:italic;
+    line-height:0.85em;
+/*    letter-spacing:-.2rem;*/
+    width:95%;
+    margin:auto;
+
+
+}
+
+
+.project-main-paragraph{
+    font-size: 24px;
+    color: #333;
+    font-family: "Test Domaine Text" !important;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: -.03em;
+    line-height: 1.125;
+   
+}
+
+/*------blackslideup_two on index.html page--*/
+
+/* Initial state of the slide-up container */
+#blackslideup_two {
+    width: 100%;
+    height: 0; /* Hidden initially */
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    transition: height 0.8s ease-in-out; 
+    /* Animation duration */
+/*    transition: top 0.6s cubic-bezier(0.4, 0, 0.2, 1); */
+    /* Smooth transition */
+    overflow: hidden;
+}
+
+/* When active, the container will have a visible height */
+#blackslideup_two.active {
+    height: 100vh; /* Full screen height on slide-up */
+}
+
+/* Style for the clickable link */
+.project__click_two {
+   /* font-family: 'CircularXX';
+    font-size: 2em;
+    color: black;*/
+/*    position: absolute;*/
+    background: none;
+    border: none;
+/*    font-size: 44px; */
+    /* Adjust font size for a thinner look */
+    cursor: pointer;
+/*    z-index: 10;*/
+    margin-top: 5em;
+}
+
+
+
+
+/*------------------------------------------*/
+
 .footer-background-color{
     background-color:#03FF5B;
     overflow: hidden;
@@ -503,11 +586,6 @@ color: black !important;
 
 
 
-
-
-
-
-
 .project-title{
     padding-top:10em;
     font-family: 'CircularXX' !important;
@@ -535,7 +613,7 @@ color: black !important;
     margin:auto;
 /*        background-color: black;*/
     border: none;
-        outline: 1px black solid;
+/*        outline: 1px black solid;*/
 
 /*  height: 100vh;*/
   overflow: hidden;
@@ -593,11 +671,6 @@ margin:auto;
 
 
 
-.scroll-wrapper {
-/*    position: relative;*/
-    height: 100vh;
-    overflow: hidden; /* Allow the iframe to scroll independently */
-  }
 
 
 #iframe-image {
@@ -629,19 +702,6 @@ margin:auto;
 
 
 
-/* Scrollable iframe */
-    #iframe-image {
-/*      position: absolute;*/
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      overflow: auto;
-      -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
-      background-color: transparent;
-/*      z-index: -1;*/
-    }
-
 
 
 
@@ -662,7 +722,7 @@ margin:auto;
 .border-bottom {
     outline: .1px black solid;
     width: 100%;
-    margin-top: 0.5em;
+    margin-top: 1.3em;
 }
 
 
@@ -705,7 +765,7 @@ height: 100vh;
 width: 100%;
 background-color: black; /* Black background for the container */
 transition: top 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition */
-z-index:500;
+z-index:999;
 
 }
 
@@ -716,9 +776,6 @@ top: 0; /* Slide it to the top of the viewport */
 }
 
 /*----*/
-
-
-
 
 
 .close-button {
@@ -803,36 +860,29 @@ a{
 
 
 
-       /* a #close-bar-color{
-            color:white;
-        }*/
-
-        /* Slide-up container styles */
-        #slide-up-container {
-            position: fixed;
-            top: 100vh; /* Initially off-screen */
-            left: 0;
-            height: 100vh;
-            width: 100%;
-            background-color: black;
-            transition: top 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            z-index: 999;
-        }
-
-        /* When active (sliding up) */
-        #slide-up-container.active {
-            top: 0; /* Slide up into view */
-        }
+    
 
 
 /*-------*/
+    /* Floating text styles */
+        .floating-text {
+            
+            cursor: pointer;
+        }
+
+
+
+
+
+
+
 
 .compartment-chair {
     position: relative;
 /*    display: inline-block;*/
     overflow: hidden; /* Ensures the image is cropped if it scales down */
     text-align: left; /* Center-aligns button and paragraph */
-        border-bottom: 1px black solid;
+/*        border-bottom: 1px black solid;*/
         padding-top:6em;
             margin: auto;
     width: 400px;
@@ -865,12 +915,13 @@ a{
 
 
 
-.info-button-compartment{
-width:100%;
-margin:auto;
-/*outline: 1px pink solid;*/
-}
 
+.info-button-compartment {
+    width:100%;
+    margin: auto;
+    /* outline: 1px pink solid; */
+    border-bottom: 1px black solid;
+}
 
 
 .info-button-compartment-new-section{
@@ -959,10 +1010,6 @@ color:black !important;
     margin-left: -7000px; /* Move completely off-screen to the right */
   }
 }
-
-
-
-
 
 
 

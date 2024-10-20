@@ -1,0 +1,118 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Close Button with Transition</title>
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Product close button styles */
+        .product__close {
+            display: block;
+            height: 58px;
+            width: 58px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 9;
+            cursor: pointer;
+            transition: opacity 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        }
+
+        .product__close-bar {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            background-color: #28282a;
+            overflow: hidden;
+            transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        .product__close-bar:first-child {
+            transform: rotate(45deg);
+        }
+
+        .product__close-bar:nth-child(2) {
+            transform: rotate(-45deg);
+        }
+
+        .product__close-background {
+            display: block;
+            height: 100%;
+            position: absolute;
+            background-color: #28282a;
+            width: 100%;
+            transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        /* Slide-up container styles */
+        #slide-up-container {
+            position: fixed;
+            top: 100vh; /* Initially off-screen */
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+            transition: top 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 999;
+        }
+
+        /* When active (sliding up) */
+        #slide-up-container.active {
+            top: 0; /* Slide up into view */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Close Button -->
+    <a href="/furniture" class="product__close is-visible">
+        <span class="product__close-bar"><span class="product__close-background"></span></span>
+        <span class="product__close-bar"><span class="product__close-background"></span></span>
+    </a>
+
+    <!-- Slide-up Container (Hidden by default) -->
+    <div id="slide-up-container"></div>
+
+    <script>
+        // Create the slide-up container (in case you want to dynamically control it)
+        const slideUpContainer = document.createElement('div');
+        slideUpContainer.id = 'slide-up-container';
+        document.body.appendChild(slideUpContainer); // Append the container to the body
+
+        // Select the close button
+        const closeButton = document.querySelector('.product__close');
+
+        // Add click event listener to the close button
+        closeButton.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default anchor behavior (navigation)
+
+            // Add custom behavior here (e.g., close animation or navigate)
+            const targetUrl = this.getAttribute('href'); // Get the URL from the href attribute
+
+            // Activate the slide-up container effect
+            slideUpContainer.classList.add('active');
+
+            // Optional: Fade-out effect on the close button
+            closeButton.style.opacity = '0';
+
+            // Wait for the slide-up effect to finish, then navigate
+            setTimeout(function () {
+                window.location.href = targetUrl;
+            }, 600); // Delay matches the CSS transition duration
+        });
+    </script>
+    
+</body>
+</html>

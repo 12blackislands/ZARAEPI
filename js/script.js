@@ -50,6 +50,36 @@ document.getElementById('hamburger').addEventListener('click', function() {
 
 
 
+// document.getElementById('slide-up-container').classList.add('active');
+
+
+function slideUp() {
+    var blackslideup = document.getElementById('blackslideup');
+    
+    // Add the 'active' class to trigger the slide-up animation
+    blackslideup.classList.add('active');
+
+    // After the slide-up animation is complete (800ms), redirect to the next page
+    setTimeout(function() {
+        window.location.href = 'aut.html'; // Redirect to the next page after animation
+    }, 800); // Time in milliseconds matches the CSS transition duration
+}
+
+
+
+
+
+function slideUptwo() {
+    var blackslideuptwo = document.getElementById('blackslideup_two');
+    
+    // Add the 'active' class to trigger the slide-up animation
+    blackslideuptwo.classList.add('active');
+
+    // After the slide-up animation is complete (800ms), redirect to the next page
+    setTimeout(function() {
+        window.location.href = 'closeproduct.html'; // Redirect to the next page after animation
+    }, 800); // Time in milliseconds matches the CSS transition duration
+}
 
 
 
@@ -57,5 +87,7 @@ document.getElementById('hamburger').addEventListener('click', function() {
 
 
 
+
+   
 
         
