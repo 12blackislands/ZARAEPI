@@ -171,7 +171,7 @@ function toggleDropdown() {
 
 
 // jquery- always put your jquery source first above any other js
-
+// slidable container testing
 $(document).ready(function() {
     var isOpen = false; // State variable to track open/close
 
@@ -193,6 +193,60 @@ $(document).ready(function() {
 
 
 
+
+
+
+// info-toggle testing
+$(document).ready(function() {
+    var isOpen = false; // State variable to track open/close
+
+    $('.info-toggle-button').on('click', function() {
+        var description = $('.info-description-container');
+
+        if (!isOpen) {
+            description.css('display', 'block'); // Show the container first
+            setTimeout(function() {
+                description.addClass('active'); // Add active class for transition
+            }, 10); // Delay to allow display to take effect
+            isOpen = true;
+        } else {
+            description.removeClass('active'); // Remove active class to start slide-up
+            setTimeout(function() {
+                description.css('display', 'none'); // Hide after slide-up completes
+            }, 500); // Match this duration with the CSS transition
+            isOpen = false;
+        }
+    });
+});
+
+
+
+
+// info section container testing - i prefer this one with the slideup effect
+$(document).ready(function() {
+    var isOpen = false; // State variable to track open/close
+
+    $('.info-toggle-btn').on('click', function() {
+        var content = $('.info-content');
+        var titleSection = $('.title-section');
+
+        if (!isOpen) {
+            content.css('display', 'block'); // Show the content first
+            setTimeout(function() {
+                content.addClass('active'); // Add active class for transition
+                titleSection.css('max-height', '50px'); // Shrink the title section
+            }, 10); // Delay to allow display to take effect
+            isOpen = true;
+        } else {
+            content.removeClass('active'); // Remove active class to start slide-up
+            setTimeout(function() {
+                content.css('display', 'none'); // Hide after slide-up completes
+                titleSection.css('max-height', '100px'); // Restore the title section height
+            }, 500); // Match this duration with the CSS transition
+            isOpen = false;
+        }
+    });
+});
 
    
 

@@ -1,5 +1,109 @@
 /* global */
 
+/*info section container testing*/
+.info-toggle-btn{
+    font-family:"Test Domaine Text" !important;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: -.03em;
+    line-height: 1.125;
+    font-size:30px;
+}
+
+
+
+.info-section-container {
+    margin: 1em 0; /* Space around the section */
+}
+
+.info-toggle-wrapper {
+    margin: 1em 0; /* Space around the toggle wrapper */
+}
+
+.info-content {
+    max-height: 0; /* Initially hidden */
+    overflow: hidden; /* Prevent overflow */
+/*    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; */
+    /* Smooth transition */
+     transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition with cubic-bezier */
+    opacity: 0; /* Initially hidden */
+    font-size: 1.4em; /* Adjust font size as needed */
+    color: #333; /* Change text color as needed */
+    font-family:"Test Domaine Text" !important;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: -.03em;
+    line-height: 1.125;
+
+}
+
+.info-content.active {
+    max-height: 200px; /* Adjust based on your content */
+    opacity: 1; /* Fully visible */
+}
+
+.title-section {
+/*    transition: max-height 0.5s ease-in-out; */
+    /* Smooth transition */
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition with cubic-bezier */
+    opacity: 0; /* Initially hidden */
+    max-height: 100px; /* Initial height */
+    overflow: hidden; /* Prevent overflow */
+    font-size: 1.4em; /* Adjust font size as needed */
+    color: #333; /* Change text color as needed */
+    font-family:"Test Domaine Text" !important;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: -.03em;
+    line-height: 1.125;
+
+}
+
+.title-text {
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for the title */
+    margin: 0; /* Remove margin */
+    font-size: 1.4em; /* Adjust font size as needed */
+    color: #333; /* Change text color as needed */
+    font-family:"Test Domaine Text" !important;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: -.03em;
+    line-height: 1.125;
+
+}
+
+
+/*--info toggle testing--*/
+
+.info-toggle-container {
+    margin: 1em 0; /* Space around the container */
+}
+
+.info-description-container {
+    max-height: 0; /* Initially hidden */
+    overflow: hidden; /* Prevent overflow */
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition */
+    opacity: 0; /* Initially hidden */
+}
+
+.info-description-container.active {
+    max-height: 200px; /* Adjust based on your content */
+    opacity: 1; /* Fully visible */
+}
+
+
+.info-description-container{
+    font-size: 1.4em; /* Adjust font size as needed */
+    color: #333; /* Change text color as needed */
+    font-family:"Test Domaine Text" !important;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: -.03em;
+    line-height: 1.125;
+
+}
+
+/*--<!-- example slidable-container testing--> --*/
 .slidable-container {
     margin: 20px;
     border: 1px solid #007BFF;
