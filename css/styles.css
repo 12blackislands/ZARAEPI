@@ -11,7 +11,7 @@
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 4px;
+    font-size: 40px;
     border-radius: 5px;
 }
 
@@ -1101,7 +1101,7 @@ color:black !important;
 
 
 .info-container.active {
-    max-height: 800px; 
+    max-height: 2000px; 
     /* Adjust this value as needed based on content size */
 /*    height: auto;*/
     padding-bottom:2em;
