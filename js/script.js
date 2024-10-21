@@ -8,26 +8,47 @@ document.getElementById('hamburger').addEventListener('click', function() {
 
 
 
-   // Toggle info for the original compartment chair section
-        const infoButtons = document.querySelectorAll('.info-button');
-        const closeButton = document.querySelector('.close-button');
-        const images = document.querySelectorAll('.chair-image');
-        const infoContainers = document.querySelectorAll('.info-container');
+  
 
-        infoButtons.forEach((button, index) => {
-            button.addEventListener('click', function() {
-                images[index]?.classList.toggle('shrink'); // Shrink image for the corresponding section
-                infoContainers[index].classList.toggle('active'); // Toggle the dropdown
-            });
-        });
+// --------add timing to the js
+        // Toggle info for the original compartment chair section
+const infoButtons = document.querySelectorAll('.info-button');
+const closeButton = document.querySelector('.close-button');
+const images = document.querySelectorAll('.chair-image');
+const infoContainers = document.querySelectorAll('.info-container');
 
-        closeButton.addEventListener('click', function() {
-            images.forEach(image => image.classList.remove('shrink')); // Remove shrink from all images
-            infoContainers.forEach(container => container.classList.remove('active')); // Remove active from all containers
-        });
+infoButtons.forEach((button, index) => {
+    button.addEventListener('click', function() {
+        images[index]?.classList.toggle('shrink'); // Shrink image for the corresponding section
+        const infoContainer = infoContainers[index];
+
+        if (infoContainer.classList.contains('active')) {
+            infoContainer.style.opacity = '0'; // Start fade out
+            setTimeout(() => {
+                infoContainer.classList.remove('active'); // Remove active class after fade out
+            }, 700); // Match with CSS transition duration
+        } else {
+            infoContainer.classList.add('active'); // Add active class to show
+            infoContainer.style.display = 'block'; // Show the container
+            setTimeout(() => {
+                infoContainer.style.opacity = '1'; // Fade in after displaying
+            }, 10); // Slight delay to ensure the display change takes effect
+        }
+    });
+});
+
+closeButton.addEventListener('click', function() {
+    images.forEach(image => image.classList.remove('shrink')); // Remove shrink from all images
+    infoContainers.forEach(container => {
+        container.style.opacity = '0'; // Start fade out
+        setTimeout(() => {
+            container.classList.remove('active'); // Remove active after fade out
+        }, 700); // Match with CSS transition duration
+    });
+});
 
 
-
+// 
 
 
 
@@ -128,7 +149,7 @@ function slideUpfour() {
 // }
 
 
-
+// testing dropdown
 function toggleDropdown() {
     const dropdownContent = document.querySelector('.dropdown-content');
     const isActive = dropdownContent.classList.toggle('active');
@@ -148,6 +169,27 @@ function toggleDropdown() {
 
 
 
+
+// jquery- always put your jquery source first above any other js
+
+$(document).ready(function() {
+    var isOpen = false; // State variable to track open/close
+
+    $('.slide-button').on('click', function() {
+        var description = $('.description-container');
+
+        if (!isOpen) {
+            description.slideDown('slow', function() {
+                description.addClass('active'); // Add active class after sliding down
+            });
+            isOpen = true;
+        } else {
+            description.removeClass('active'); // Remove active class before sliding up
+            description.slideUp('slow');
+            isOpen = false;
+        }
+    });
+});
 
 
 
