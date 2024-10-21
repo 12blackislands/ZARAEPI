@@ -113,6 +113,19 @@ function slideUpfour() {
 
 
 
+// function toggleInfo() {
+//     const infoContainer = document.querySelector('.new-info-container');
+//     infoContainer.classList.toggle('active');
+
+//     // Adjust display style for dropdown effect
+//     if (infoContainer.classList.contains('active')) {
+//         infoContainer.style.display = 'block'; // Show the container
+//     } else {
+//         setTimeout(() => {
+//             infoContainer.style.display = 'none'; // Hide it after the slide-up effect
+//         }, 500); // Match this duration with your CSS transition
+//     }
+// }
 
 
 

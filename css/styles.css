@@ -1020,6 +1020,7 @@ a{
     letter-spacing: -.03em;
     line-height: 1.125;
     color: black !important;
+    text-align:left;
   
 
 }
@@ -1054,23 +1055,27 @@ color:black !important;
 
 
 .info-container {
-/*    max-height: 0; */
+    max-height: 0; 
     /* Initially hidden */
-    height: 0;
+/*    height: 0;*/
     overflow: hidden; /* Prevents content from showing when hidden */
-    transition: max-height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Transition effect for max height */
+    transition: max-height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); 
+    /* Transition effect for max height */
 /*    border-bottom:1px black solid;*/
+ transition: max-height 0.5s ease-out; 
 }
 
 
 .info-container.active {
-/*    max-height: 100em; */
+    max-height: 800px; 
     /* Adjust this value as needed based on content size */
-    height: auto;
+/*    height: auto;*/
     padding-bottom:2em;
     transition: max-height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+/* transition: max-height 0.5s ease-out; */
   
 }
+
 
 .info-paragraph {
     margin: 10px 0; /* Space around the paragraph */
@@ -1081,6 +1086,7 @@ color:black !important;
     font-style: normal;
     letter-spacing: -.03em;
     line-height: 1.125;
+/*    transition: max-height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);*/
     
 }
 
