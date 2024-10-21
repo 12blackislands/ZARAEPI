@@ -1020,7 +1020,7 @@ a{
     letter-spacing: -.03em;
     line-height: 1.125;
     color: black !important;
-    text-align:left;
+    text-align:left !important;
   
 
 }
