@@ -83,6 +83,36 @@ function slideUptwo() {
 
 
 
+function slideUpthree() {
+    var blackslideupthree = document.getElementById('blackslideup_three');
+    
+    // Add the 'active' class to trigger the slide-up animation
+    blackslideupthree.classList.add('active');
+
+    // After the slide-up animation is complete (800ms), redirect to the next page
+    setTimeout(function() {
+        window.location.href = 'aut.html'; // Redirect to the next page after animation
+    }, 800); // Time in milliseconds matches the CSS transition duration
+}
+
+
+
+
+function slideUpfour() {
+    var blackslideupfour = document.getElementById('blackslideup_four');
+    
+    // Add the 'active' class to trigger the slide-up animation
+    blackslideupfour.classList.add('active');
+
+    // After the slide-up animation is complete (800ms), redirect to the next page
+    setTimeout(function() {
+        window.location.href = 'aut.html'; // Redirect to the next page after animation
+    }, 800); // Time in milliseconds matches the CSS transition duration
+}
+
+
+
+
 
 
 
