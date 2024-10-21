@@ -7,11 +7,11 @@
 
 .dropdown-button {
     padding: 10px 15px;
-    background-color: #007BFF;
+    background-color: blue;
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 4px;
     border-radius: 5px;
 }
 
