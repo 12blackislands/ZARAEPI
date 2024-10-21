@@ -129,6 +129,27 @@ function slideUpfour() {
 
 
 
+function toggleDropdown() {
+    const dropdownContent = document.querySelector('.dropdown-content');
+    const isActive = dropdownContent.classList.toggle('active');
+
+    if (isActive) {
+        dropdownContent.style.display = 'block'; // Show the container
+        setTimeout(() => {
+            dropdownContent.style.opacity = '1'; // Fade in
+        }, 10); // Slight delay to trigger the CSS transition
+    } else {
+        dropdownContent.style.opacity = '0'; // Fade out
+        setTimeout(() => {
+            dropdownContent.style.display = 'none'; // Hide it after the transition
+        }, 700); // Match this duration with your CSS transition for a slower effect
+    }
+}
+
+
+
+
+
 
 
    

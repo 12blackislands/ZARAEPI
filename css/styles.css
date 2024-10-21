@@ -1,6 +1,40 @@
 /* global */
 
 
+.dropdown-section {
+    margin: 20px;
+}
+
+.dropdown-button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease, opacity 0.7s ease; /* Slow transitions */
+    opacity: 0; /* Initially hidden */
+}
+
+.dropdown-content.active {
+    max-height: 300px; /* Set a max height that fits your content */
+    opacity: 1; /* Make it fully visible */
+    display: block; /* This allows the content to take up space */
+}
+
+
+/*-------*/
+
+
+
+
+
 /*Schnyder Family*/
 @font-face {
     font-family: "Schnyder Family";
