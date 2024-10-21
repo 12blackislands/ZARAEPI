@@ -643,6 +643,34 @@ color: black !important;
 }
 
 
+/*-------aut.html page-------*/
+
+.main_project_title{
+    font-family: "Schnyder Family";
+    font-weight: 300;
+    font-size:3em;
+    color:black;
+    font-style:italic;
+    line-height:0.85em;
+/*    letter-spacing:-.2rem;*/
+    width:95%;
+    margin:auto;
+    margin-top: 4em;
+}
+
+
+.main_project_description{
+    font-size: 24px;
+    color: #333;
+    font-family: "Test Domaine Text" !important;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: -.05em;
+    line-height: 1.125;
+    width:95%;
+    margin:auto;
+}
+
 
 .title {
     font-size: 1.4em;
@@ -966,7 +994,7 @@ a{
     overflow: hidden; /* Ensures the image is cropped if it scales down */
     text-align: left; /* Center-aligns button and paragraph */
 /*        border-bottom: 1px black solid;*/
-        padding-top:6em;
+        padding-top:3em;
             margin: auto;
     width: 400px;
 }
@@ -1026,7 +1054,9 @@ color:black !important;
 
 
 .info-container {
-    max-height: 0; /* Initially hidden */
+/*    max-height: 0; */
+    /* Initially hidden */
+    height: 0;
     overflow: hidden; /* Prevents content from showing when hidden */
     transition: max-height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Transition effect for max height */
 /*    border-bottom:1px black solid;*/
@@ -1034,7 +1064,11 @@ color:black !important;
 
 
 .info-container.active {
-    max-height: 200px; /* Adjust this value as needed based on content size */
+/*    max-height: 100em; */
+    /* Adjust this value as needed based on content size */
+    height: auto;
+    padding-bottom:2em;
+    transition: max-height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   
 }
 
@@ -1048,6 +1082,11 @@ color:black !important;
     letter-spacing: -.03em;
     line-height: 1.125;
     
+}
+
+
+.br_padding{
+    margin-top:1.2em;
 }
 
 
