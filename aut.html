@@ -1,20 +1,18 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>ZARA__EPIFANTSEVA__DESIGN__DEVELOPMENT</title>
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
- <div class="menu-container">
+
+
+<!-- menu container -->
+<div class="menu-container">
         <div class="hamburger" id="hamburger">
-           <!--  <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div> -->
             <span></span>
 			<span></span>
 			<span></span>
@@ -25,213 +23,129 @@
 				<li class="menu-item"><a href="#" data-to="" class="menu-link">WORK</a></li>
 				<li class="menu-item"><a href="#" data-to="" class="menu-link">CONTACT</a></li>
 				<li class="menu-item"><a href="#" data-to="" class="menu-link">ABOUT</a></li>
-				
-               <!--  <li>Menu Item 1</li>
-                <li>Menu Item 2</li>
-                <li>Menu Item 3</li> -->
             </ul>
         </div>
     </div>
 
 
 
+  <div class="page-transition"></div>
 
-<!-- section-one top menu container --> 
-<div class="section">    
-	<div class="section-one-background-color">
-		<div class="section-one">
-			<div class="logo-name"><a href="index.html">ZARAEPIFANTSEVA</a></div>
-		</div>
-	</div>
-</div>
-
- <!-- <button class="close-button"><a href="index.html">&times;</a></button> -->
- <!-- Close button positioned here -->
-
-
- <!-- Close Button -->
- <div class="close-bar">
-    <a href="index.html" class="close-button">
-        <span class="product__close-bar" id="close-bar-color"><span class="product__close-background"></span></span>
-        <span class="product__close-bar" id="close-bar-color"><span class="product__close-background"></span></span>
-    </a>
-</div>
-
-  
-<div class="main_project_title">AUCKLAND UNIVERSITY OF TECHNOLOGY</div>
-<div class="main_project_description">Reimagining learning and teaching experience at Auckland University of Technology (AUT).</div>
-
-
-
-
-<div class="compartment-chair">
-    <img src="./image/aut_one.jpg" alt="Compartment Chair" class="chair-image">
-    <div class="info-button-compartment">
-    <button class="info-button">PROBLEM STATEMENT</button>
-     
-    <div class="info-container">
-        <p class="info-paragraph">In 2023, there were X,XXX incidents related to audio-visual issues at AUT, averaging XX per week, and XX per day across three campuses. These requests, handled by the ICT Service Desk, Cyclone/Field Services and the audio-visual team, ranged in priority from P1 to P5, based on the 40 weeks of the university calendar year. <br><div class="br_padding"></div></p>
-
-
- <p class="info-paragraph">
-Historical data from the ServiceNow revealed that in 2020, there were XX incidents related specifically to the Learning and Teaching/LT team and XXX incidents related to Field Services/FS, with an overall total of XXX incidents. <br><div class="br_padding"></div></p>
-
- <p class="info-paragraph">
-The trend showed a gradual increase in incidents over the subsequent years, with XXX incidents in 2021, XX LT-related and XXX Field Services-related, and XXX incidents in 2022, XX LT-related and XXX Field Services-related.<br><div class="br_padding"></div></p>
-
-
- <p class="info-paragraph">
-However, 2023 saw a dramatic rise to X,XXX incidents, with XXX related to LT and X,XXX to Field Services. This sharp increase suggests a significant surge in demand for support, potentially driven by an expansion in Field Services and responsibilities, which now includes broader support for both audio-visual and software usability issues. <br><div class="br_padding"></div></p>
-
-
- <p class="info-paragraph">
-The rise in incidents highlights an increased complexity in support needs, particularly as software and audio-visual usability issues became more prominent.<br><div class="br_padding"></div></p>
-
-
- <p class="info-paragraph">
-The reports data from the 2020- 2023 combined various problems, such as equipment faults, rebooting issues, and general end-user issues.<br><div class="br_padding"></div></p>
-
-
-
-
- <p class="info-paragraph">
-Due to intellectual property restrictions, the UX Lead/Specialist is unable to disclose the report figures for this project.<br><div class="br_padding"></div></p>
-
-
-
-    </div>
-</div>
- <div class="border-bottom"></div>
-</div>
-
-
-
-<!-- New Section -->
-   <!--  <div class="new-section">
-    
-        <div class="info-button-compartment-new-section">
-        <button class="info-button new-info-button">Designing for Human Experience</button>
-        <div class="info-container new-info-container">
-            <p class="info-paragraph">The UX Lead/Specialist (Zara Epifantseva) conducted, facilitated, led, mentored, and coached the audio-visual team to investigate the challenges that academic lecturers encounter when using audio-visual equipment during teaching and learning in the classroom at AUT.
-                <br><div class="br_padding"></div></p>
-
- <p class="info-paragraph">
-Human-centered Design methodology, Design Thinking Methods, and the Double Diamond framework were implemented throughout the design process.</p>
-
- <img src="./image/aut-diamond.jpg" alt="Compartment Chair" class="chair-image">
+    <!-- Logo container -->
+    <div class="logo-container">    
+        <div class="logo-background-color">
+            <div class="logo-section">
+                <div class="logo-name"><a href="index.html" onclick="handleTransitionlogo(event)">ZARAEPIFANTSEVA</a></div>
+            </div>
         </div>
     </div>
-</div> -->
+
+
+
+ <!-- Animated X Button -->
+    <div class="x-button" onclick="handleTransition(event)">
+        <div class="x-line"></div>
+        <div class="x-line"></div>
+    </div>
+
+    <!-- Split panels transition container -->
+    <div class="transition-container">
+        <div class="panel panel-top"></div>
+        <div class="panel panel-bottom"></div>
+    </div>
 
 
 
 
-<!-- New Section -->
-   <!--  <div class="new-section">
+
+<!-- infinite image moving horizontal slider -->
+   <div class="tech-slideshow">
+            <div class="mover">
+                <img src="./image/aut-diamond.jpg" alt="Image 1">
+                <img src="./image/aut-diamond.jpg" alt="Image 2">
+                <img src="./image/aut-diamond.jpg" alt="Image 3">
+                <img src="./image/aut-diamond.jpg" alt="Image 4">
+                <img src="./image/aut-diamond.jpg" alt="Image 5">
+                <img src="./image/aut-diamond.jpg" alt="Image 6">
+                <img src="./image/aut-diamond.jpg" alt="Image 7">
+                <img src="./image/aut-diamond.jpg" alt="Image 8">
+                <img src="./image/aut-diamond.jpg" alt="Image 9">
+                <img src="./image/aut-diamond.jpg" alt="Image 10">
+            </div>
+        </div>
+
+ 
+
+<!-- clickon problem statement button -->
+  <div class="info-button-compartment">
+            PROBLEM STATEMENT
       
-        <div class="info-button-compartment-new-section">
-        <button class="info-button new-info-button">Project Goal</button>
-        <div class="info-container new-info-container">
-            <p class="info-paragraph">This project aims to enhance the user experience for academic lecturers using audio-visual equipment during classroom teaching and learning sessions. <br><div class="br_padding"></div></p>
-
-<p class="info-paragraph">
-The goal of the audio-visual team is to enable lecturers to become 
-self-sufficient with the equipment within 3 to 6 months after the new solution is implemented.</p>
-
-<img src="./image/aut_one.jpg" alt="Compartment Chair" class="chair-image">
-
-        </div>
-    </div>
-</div>
-
- -->
 
 
-
-<!-- New Section -->
-   <!--  <div class="new-section">
-     
-        <div class="info-button-compartment-new-section">
-        <button class="info-button new-info-button">Methods and Methodology</button>
-        <div class="info-container new-info-container">
-            <p class="info-paragraph">This is additional information about the new section. It gives insights into its purpose and details.</p>
-
-            <img src="./image/aut-diamond.jpg" alt="Compartment Chair" class="chair-image">
-
-        </div>
-    </div>
-</div>
- -->
-
-<!-- example dropdown testing-->
-
-<!-- <div class="dropdown-section">
-    <button class="dropdown-button" onclick="toggleDropdown()">Project Goal</button>
-    <div class="dropdown-content" style="display: none;">
-        <p>This project aims to enhance the user experience for academic lecturers using audio-visual equipment during classroom teaching and learning sessions.</p>
-        <p>The goal of the audio-visual team is to enable lecturers to become self-sufficient with the equipment within 3 to 6 months after the new solution is implemented.</p>
-    </div>
-</div>
- -->
-<!--  -->
+ <div class="info-container">
+            In 2023, there were X,XXX incidents related to audio-visual issues at
+            AUT, averaging XX per week, and XX per day across three campuses. These
+            requests, handled by the ICT Service Desk, Cyclone/Field Services and
+            the audio-visual team, ranged in priority from P1 to P5, based on the 40
+            weeks of the university calendar year.
+             In 2023, there were X,XXX incidents related to audio-visual issues at
+            AUT, averaging XX per week, and XX per day across three campuses. These
+            requests, handled by the ICT Service Desk, Cyclone/Field Services and
+            the audio-visual team, ranged in priority from P1 to P5, based on the 40
+            weeks of the university calendar year.
+             In 2023, there were X,XXX incidents related to audio-visual issues at
+            AUT, averaging XX per week, and XX per day across three campuses. These
+            requests, handled by the ICT Service Desk, Cyclone/Field Services and
+            the audio-visual team, ranged in priority from P1 to P5, based on the 40
+            weeks of the university calendar year.
+             In 2023, there were X,XXX incidents related to audio-visual issues at
+            AUT, averaging XX per week, and XX per day across three campuses. These
+            requests, handled by the ICT Service Desk, Cyclone/Field Services and
+            the audio-visual team, ranged in priority from P1 to P5, based on the 40
+            weeks of the university calendar year.
+            <div class="border-bottom"></div>
+      </div></div>
+   
 
 
-
-<!-- example slidable-container testing-->
-<!-- <div class="slidable-container">
-    <button class="slide-button">Show/Hide Description</button>
-    <div class="description-container" style="display: none;">
-        <p>This is the description that will slide up and down when the button is clicked.The UX Lead/Specialist (Zara Epifantseva) conducted, facilitated, led, mentored, and coached the audio-visual team to investigate the challenges that academic lecturers encounter when using audio-visual equipment during teaching and learning in the classroom at AUT.The UX Lead/Specialist (Zara Epifantseva) conducted, facilitated, led, mentored, and coached the audio-visual team to investigate the challenges that academic lecturers encounter when using audio-visual equipment during teaching and learning in the classroom at AUT.The UX Lead/Specialist (Zara Epifantseva) conducted, facilitated, led, mentored, and coached the audio-visual team to investigate the challenges that academic lecturers encounter when using audio-visual equipment during teaching and learning in the classroom at AUT.</p>
-    </div>
-</div>
- -->
+   <!-- clickon project button compartment -->
+  <div class="project-button-compartment">
+            PROJECT GOAL
+        
 
 
-
-<!-- info toggle testing -->
-<!-- <div class="info-toggle-container">
-    <button class="info-toggle-button">Show/Hide Info</button>
-    <div class="info-description-container" style="display: none;">
-        <p>This is the info that will slide up and down when the button is clicked.</p>
-    </div>
-</div> -->
-
-
-<!-- info section container testing -->
-<div class="info-section-container">
-    <div class="info-toggle-wrapper">
-        <button class="info-toggle-btn">DESIGNING FOR HUMAN EXPERIENCE</button>
-
-        <div class="info-content" style="display: none;">
-            <p class="info-content_p">The UX Lead/Specialist (Zara Epifantseva) conducted, facilitated, led, mentored, and coached the audio-visual team to investigate the challenges that academic lecturers encounter when using audio-visual equipment during teaching and learning in the classroom at AUT. <br><div class="br_padding"></div></p>
-          <p class="info-content_p">
-            Human-centered Design methodology, Design Thinking Methods, and the Double Diamond framework were implemented throughout the design process.<br><div class="br_padding"></div></p>
-              
-        </div>
-        <div class="border-bottom"></div>
-    </div>
-
-
-<!-- <div class="title-section">
-        <h2 class="title-text">Initial Title</h2>
-    </div> -->
-</div>
+ <div class="project-details">
+            In 2023, there were X,XXX incidents related to audio-visual issues at
+            AUT, averaging XX per week, and XX per day across three campuses. These
+            requests, handled by the ICT Service Desk, Cyclone/Field Services and
+            the audio-visual team, ranged in priority from P1 to P5, based on the 40
+            weeks of the university calendar year.
+             In 2023, there were X,XXX incidents related to audio-visual issues at
+            AUT, averaging XX per week, and XX per day across three campuses. These
+            requests, handled by the ICT Service Desk, Cyclone/Field Services and
+            the audio-visual team, ranged in priority from P1 to P5, based on the 40
+            weeks of the university calendar year.
+             In 2023, there were X,XXX incidents related to audio-visual issues at
+            AUT, averaging XX per week, and XX per day across three campuses. These
+            requests, handled by the ICT Service Desk, Cyclone/Field Services and
+            the audio-visual team, ranged in priority from P1 to P5, based on the 40
+            weeks of the university calendar year.
+             In 2023, there were X,XXX incidents related to audio-visual issues at
+            AUT, averaging XX per week, and XX per day across three campuses. These
+            requests, handled by the ICT Service Desk, Cyclone/Field Services and
+            the audio-visual team, ranged in priority from P1 to P5, based on the 40
+            weeks of the university calendar year.
+             <div class="border-bottom"></div>
+      </div></div>
 
 
-   <!-- <div id="slide-up-container"></div> -->
-     <!-- Slide-up Container (Hidden by default) -->
-    <div id="slide-up-container"></div>
 
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
 
 <script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.3/popup.min.js"></script>
 <script src="js/script.js"></script>
-
 </body>
 </html>

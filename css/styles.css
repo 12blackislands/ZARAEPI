@@ -1,191 +1,3 @@
-/* global */
-
-/*info section container testing*/
-.info-toggle-btn{
-    text-align:left !important;
-    font-family: "Schnyder Family";
-    font-weight: 300;
-    font-size: 2.1em;
-    color: black;
-    font-style: italic;
-    line-height: 0.85em;
-/*    border-bottom:1px black solid;*/
-}
-
-
-
-.info-section-container {
-/*    margin: 1em 0; */
-    /* Space around the section */
-    width:95%;
-    margin:auto;
-/*    outline:1px pink solid;*/
-
-}
-
-.info-toggle-wrapper {
-    margin: 1em 0; /* Space around the toggle wrapper */
-}
-
-.info-content {
-    max-height: 0; /* Initially hidden */
-    overflow: hidden; /* Prevent overflow */
-/*    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; */
-    /* Smooth transition */
-     transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition with cubic-bezier */
-    opacity: 0; /* Initially hidden */
-    font-size: 24px; /* Adjust font size as needed */
-    color: #333; /* Change text color as needed */
-    font-family:"Test Domaine Text" !important;
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: -.03em;
-    line-height: 1.125;
-
-}
-
-.info-content.active {
-    max-height: 900px; /* Adjust based on your content */
-    opacity: 1; /* Fully visible */
-}
-
-.info-content_p{
-    margin: 10px 0;
-}
-
-.title-section {
-/*    transition: max-height 0.5s ease-in-out; */
-    /* Smooth transition */
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition with cubic-bezier */
-    opacity: 0; /* Initially hidden */
-    max-height: 100px; /* Initial height */
-    overflow: hidden; /* Prevent overflow */
-    font-size: 1.4em; /* Adjust font size as needed */
-    color: #333; /* Change text color as needed */
-    font-family:"Test Domaine Text" !important;
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: -.03em;
-    line-height: 1.125;
-
-}
-
-.title-text {
-    transition: opacity 0.5s ease-in-out; /* Smooth transition for the title */
-    margin: 0; /* Remove margin */
-    font-size: 1.4em; /* Adjust font size as needed */
-    color: #333; /* Change text color as needed */
-    font-family:"Test Domaine Text" !important;
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: -.03em;
-    line-height: 1.125;
-
-}
-
-
-/*--info toggle testing--*/
-
-.info-toggle-container {
-    margin: 1em 0; /* Space around the container */
-}
-
-.info-description-container {
-    max-height: 0; /* Initially hidden */
-    overflow: hidden; /* Prevent overflow */
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition */
-    opacity: 0; /* Initially hidden */
-}
-
-.info-description-container.active {
-    max-height: 200px; /* Adjust based on your content */
-    opacity: 1; /* Fully visible */
-}
-
-
-.info-description-container{
-    font-size: 1.4em; /* Adjust font size as needed */
-    color: #333; /* Change text color as needed */
-    font-family:"Test Domaine Text" !important;
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: -.03em;
-    line-height: 1.125;
-
-}
-
-/*--<!-- example slidable-container testing--> --*/
-.slidable-container {
-    margin: 20px;
-    border: 1px solid #007BFF;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.slide-button {
-    padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 30px;
-    border-radius: 5px;
-}
-
-.description-container {
-    transition: max-height 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 0; /* Initially hidden */
-    max-height: 0; /* Initially hidden */
-    overflow: hidden;
-    font-size: 1.4em; /* Adjust font size as needed */
-    color: #333; /* Change text color as needed */
-    font-family:"Test Domaine Text" !important;
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: -.03em;
-    line-height: 1.125;
-
-}
-
-.description-container.active {
-    opacity: 1; /* Fully visible */
-    max-height: 900px; /* Adjust based on your content */
-}
-
-
-/*---testing--*/
-
-.dropdown-section {
-    margin: 20px;
-}
-
-.dropdown-button {
-    padding: 10px 15px;
-    background-color: blue;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 40px;
-    border-radius: 5px;
-}
-
-.dropdown-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.7s ease, opacity 0.7s ease; /* Slow transitions */
-    opacity: 0; /* Initially hidden */
-}
-
-.dropdown-content.active {
-    max-height: 300px; /* Set a max height that fits your content */
-    opacity: 1; /* Make it fully visible */
-    display: block; /* This allows the content to take up space */
-}
-
-
-/*-------*/
-
-
 
 
 
@@ -357,7 +169,7 @@ h1, h2, h3, h4, p {
     padding: 0;
 }
 
-/*All devices and mobile phone*/
+
 
 /*All devices and mobile phone*/
 body:before {
@@ -371,6 +183,12 @@ body:before {
   z-index: 1;
 }
 
+
+
+
+/*index.html page*/
+
+/*menu-container*/
 .menu-container {
     position: relative;
    /* width: 200px;
@@ -507,7 +325,12 @@ body:before {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-.section{
+
+
+
+/*logo name/designer name*/
+
+.logo-container{
      overflow: hidden;
      width:100%;
      margin:auto;
@@ -516,7 +339,7 @@ body:before {
 
 
 /*the top menu box when on scroll they are fixed*/
-.section-one-background-color{   
+.logo-background-color{   
     overflow: hidden;
     width: 100%;
     margin: auto;
@@ -527,8 +350,9 @@ body:before {
 }
 
 
-/*section-one*/
-.section-one{
+
+
+.logo-section{
     width:95%;
     height:6em;
     margin:auto;
@@ -538,6 +362,7 @@ body:before {
 
 
 }
+
 
 
 .logo-name{
@@ -558,63 +383,61 @@ body:before {
 
 
 
-
-/*------project section on index.html page----------*/
-
-
-/* Initial state of the slide-up container */
-#blackslideup {
-    width: 100%;
-    height: 0; /* Hidden initially */
-    background-color: black;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-    transition: height 0.8s ease-in-out; 
-    /* Animation duration */
-/*    transition: top 0.6s cubic-bezier(0.4, 0, 0.2, 1); */
-    /* Smooth transition */
-    overflow: hidden;
+/* Moving Image Styles */
+.moving-image-container {
+  width: 1000px;
+  position: relative;
+/*  height: 150px; */
+  /* Image container height */
+  margin-top:6.1em;
 }
 
-/* When active, the container will have a visible height */
-#blackslideup.active {
-    height: 100vh; /* Full screen height on slide-up */
+.moving-image {
+  position: absolute;
+  animation: horizontalMove 50s linear infinite; /* Infinite horizontal movement */
+      border-bottom: 1px black solid;
 }
 
-/* Style for the clickable link */
-.project__click {
-   /* font-family: 'CircularXX';
-    font-size: 2em;
-    color: black;*/
-/*    position: absolute;*/
-    background: none;
-    border: none;
-/*    font-size: 44px; */
-    /* Adjust font size for a thinner look */
-    cursor: pointer;
-/*    z-index: 10;*/
-    margin-top: 5em;
+@keyframes horizontalMove {
+  0% {
+    margin-left: -500px; /* Start off-screen from the left */
+  }
+  100% {
+    margin-left: -7000px; /* Move completely off-screen to the right */
+  }
 }
 
+
+
+
+ /* Project Sections */
 .project_section {
-/*    height: 30em;*/
-/*    outline: 1px pink solid;*/
+/*    padding: 40px;*/
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     width:100%;
     margin:auto;
     margin-top:12em;
 }
 
+.project_section:hover {
+/*    background-color: yellow;*/
+}
+
+
 .container{
     margin-top:3.5em;
-
 
 }
 
 
-.project-main-title{
-    font-family: "Schnyder Family";
+
+.project-main-title {
+    /*font-size: 32px;
+    margin-bottom: 16px;*/
+/*    font-weight: bold;*/
+
+     font-family: "Schnyder Family";
     font-weight: 300;
     font-size:3em;
     color:black;
@@ -623,148 +446,66 @@ body:before {
 /*    letter-spacing:-.2rem;*/
     width:95%;
     margin:auto;
-
-
 }
 
 
-.project-main-paragraph{
-    font-size: 24px;
-    color: #333;
-    font-family: "Test Domaine Text" !important;
-    font-weight: 200;
-    font-style: normal;
-    letter-spacing: -.05em;
-    line-height: 1.125;
-   
-}
+.project-main-paragraph {
+/*color: #666;
+max-width: 600px;*/
 
-/*------blackslideup_two on index.html page--*/
-
-/* Initial state of the slide-up container */
-#blackslideup_two {
-    width: 100%;
-    height: 0; /* Hidden initially */
-    background-color: black;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-    transition: height 0.8s ease-in-out; 
-    /* Animation duration */
-/*    transition: top 0.6s cubic-bezier(0.4, 0, 0.2, 1); */
-    /* Smooth transition */
-    overflow: hidden;
-}
-
-/* When active, the container will have a visible height */
-#blackslideup_two.active {
-    height: 100vh; /* Full screen height on slide-up */
-}
-
-/* Style for the clickable link */
-.project__click_two {
-   /* font-family: 'CircularXX';
-    font-size: 2em;
-    color: black;*/
-/*    position: absolute;*/
-    background: none;
-    border: none;
-/*    font-size: 44px; */
-    /* Adjust font size for a thinner look */
-    cursor: pointer;
-/*    z-index: 10;*/
-    margin-top: 5em;
+font-size: 24px;
+color: #333;
+font-family: "Test Domaine Text" !important;
+font-weight: 200;
+font-style: normal;
+letter-spacing: -.05em;
+line-height: 1.125;
 }
 
 
+.border-bottom {
+/*height: 1px;*/
+/*background-color: #ddd;
+margin-top: 40px;*/
 
-/*------blackslideup_three on index.html page--*/
+outline: .1px black solid;
+width: 100%;
+margin-top: 1.3em;
 
-/* Initial state of the slide-up container */
-#blackslideup_three {
-    width: 100%;
-    height: 0; /* Hidden initially */
-    background-color: black;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-    transition: height 0.8s ease-in-out; 
-    /* Animation duration */
-/*    transition: top 0.6s cubic-bezier(0.4, 0, 0.2, 1); */
-    /* Smooth transition */
-    overflow: hidden;
-}
-
-/* When active, the container will have a visible height */
-#blackslideup_three.active {
-    height: 100vh; /* Full screen height on slide-up */
-}
-
-/* Style for the clickable link */
-.project__click_three {
-   /* font-family: 'CircularXX';
-    font-size: 2em;
-    color: black;*/
-/*    position: absolute;*/
-    background: none;
-    border: none;
-/*    font-size: 44px; */
-    /* Adjust font size for a thinner look */
-    cursor: pointer;
-/*    z-index: 10;*/
-    margin-top: 5em;
 }
 
 
 
 
-
-
-/*------blackslideup_four on index.html page--*/
-
-/* Initial state of the slide-up container */
-#blackslideup_four {
-    width: 100%;
-    height: 0; /* Hidden initially */
-    background-color: black;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-    transition: height 0.8s ease-in-out; 
-    /* Animation duration */
-/*    transition: top 0.6s cubic-bezier(0.4, 0, 0.2, 1); */
-    /* Smooth transition */
-    overflow: hidden;
+/* Transition Overlays */
+#transitionslideup,
+#transitionslideup_two,
+#transitionslideup_three,
+#transitionslideup_four {
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ height: 100vh;
+ background-color: black;
+ transform: translateY(100%);
+ transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+ z-index: 1000;
 }
 
-/* When active, the container will have a visible height */
-#blackslideup_four.active {
-    height: 100vh; /* Full screen height on slide-up */
-}
 
-/* Style for the clickable link */
-.project__click_four {
-   /* font-family: 'CircularXX';
-    font-size: 2em;
-    color: black;*/
-/*    position: absolute;*/
-    background: none;
-    border: none;
-/*    font-size: 44px; */
-    /* Adjust font size for a thinner look */
-    cursor: pointer;
-/*    z-index: 10;*/
-    margin-top: 5em;
+
+#transitionslideup.active,
+#transitionslideup_two.active,
+#transitionslideup_three.active,
+#transitionslideup_four.active {
+ transform: translateY(0);
 }
 
 
 
 
-/*------------------------------------------*/
-
+/*footer*/
 .footer-background-color{
     background-color:#03FF5B;
     overflow: hidden;
@@ -787,7 +528,7 @@ body:before {
 /*       font-family: 'Schnyder Family'; */
 /*       font-family: 'Euclid Circular A Trial';*/
        font-family:'Test Domaine Text' !important;
-     font-size:1.5em;
+     font-size:24px;
      padding-top:4em;
      font-weight:200;
 /*      letter-spacing: .02em;*/
@@ -803,7 +544,7 @@ body:before {
     color:black;
 /*       font-family: 'Schnyder Family'; */
        font-family: 'Test Domaine Text' !important;
-     font-size:1.5em;
+     font-size:24px;
      padding-top:1em;
      font-weight:200;
 /*      letter-spacing: .02em;  */
@@ -831,517 +572,318 @@ color: black !important;
 }
 
 
-/*-------aut.html page-------*/
 
-.main_project_title{
-    font-family: "Schnyder Family";
-    font-weight: 300;
-    font-size:3em;
-    color:black;
-    font-style:italic;
-    line-height:0.85em;
-/*    letter-spacing:-.2rem;*/
-    width:95%;
-    margin:auto;
-    margin-top: 4em;
+
+
+
+/*aut.html page*/
+    /* Page transition overlay */
+.page-transition {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: black;
+    z-index: 1000;
+    transition: height 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+    transform-origin: bottom;
+}
+ 
+
+.page-transition.active {
+    height: 100%;
 }
 
 
-.main_project_description{
-    font-size: 24px;
-    color: #333;
-    font-family: "Test Domaine Text" !important;
+/*x-animated-button-top-left*/
+ .x-button {
+            position: absolute;
+            top: 8em;
+            left: 0.2em;
+            width: 60px;
+            height: 30px;
+            cursor: pointer;
+            z-index: 20;
+/*            mix-blend-mode: difference;*/
+             /* This makes it visible on any background */
+        }
+
+        .x-button:hover .x-line {
+            transform: scale(1.1);
+        }
+
+        .x-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+/*            height: 1px;*/
+             height: 1.5px;
+            background-color: black;
+            transition: transform 0.3s ease;
+        }
+
+        .x-line:first-child {
+            transform: rotate(45deg);
+            transform-origin: center;
+        }
+
+        .x-line:last-child {
+            transform: rotate(-45deg);
+            transform-origin: center;
+        }
+
+        /* Add this to your existing page transition styles */
+        .x-button.active .x-line:first-child {
+            transform: rotate(45deg) scaleX(0);
+        }
+
+        .x-button.active .x-line:last-child {
+            transform: rotate(-45deg) scaleX(0);
+        }
+
+
+
+        .transition-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            pointer-events: none;
+        }
+
+        .panel {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            background-color: black;
+            transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        .panel-top {
+            top: 0;
+            transform: translateY(-100%);
+        }
+
+        .panel-bottom {
+            bottom: 0;
+            transform: translateY(100%);
+        }
+
+        .transition-container.active .panel-top {
+            transform: translateY(0);
+        }
+
+        .transition-container.active .panel-bottom {
+            transform: translateY(0);
+        }
+
+
+
+
+
+ /* Existing styles , image slider, info problem statement*/
+        .tech-slideshow {
+/*            height: 600px;*/
+height:400px;
+/*            width: 800px;*/
+width:auto;
+            max-width: 100%;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            transform: translate3d(0, 0, 0);
+            transition: all 0.5s ease;
+
+            margin-top:6em;
+        }
+
+        .tech-slideshow > div {
+            height: 100%;
+            display: flex;
+            white-space: nowrap;
+            transition: all 0.5s ease;
+        }
+
+        .tech-slideshow img {
+            height: 100%;
+            width: auto;
+            max-width: none;
+            object-fit: cover;
+            flex: 0 0 auto;
+            transition: all 0.5s ease;
+        }
+
+        .tech-slideshow .mover {
+            animation: moveSlideshow 6s linear infinite;
+        }
+
+        @keyframes moveSlideshow {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .tech-slideshow.shrunk {
+/*            height: 300px;*/
+height:200px;
+/*            width: 400px;*/
+width:auto;
+        }
+
+        .tech-slideshow.shrunk img {
+            height: 100%;
+        }
+
+        .info-button-compartment {
+            /*text-align: center;
+            margin: 10px 0;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);*/
+
+
+
+ text-align: left;
+    /* margin: 10px 0; */
+    cursor: pointer;
+    /* padding: 10px; */
+    /* background-color: #f0f0f0; */
+    /* border: 1px solid #ddd; */
+    /* display: inline-block; */
+    position: relative;
+    /* transform: translateX(-50%); */
+    margin-top: 0.2em;
+    font-family: 'Schnyder Family';
+    font-style: italic;
+    font-size: 2.2em;
     font-weight: 200;
-    font-style: normal;
-    letter-spacing: -.05em;
-    line-height: 1.125;
-    width:95%;
-    margin:auto;
-}
-
-
-.title {
-    font-size: 1.4em;
-    color: #28282a;
-    /* font-family: 'Schnyder Family'; */
-    /* font-family: 'Euclid Circular A Trial'; */
-    /* font-family: Test Untitled Sans; */
-    font-family: 'Test Domaine Text' !important ;
-    /* font-style: italic; */
-    font-weight: 300;
-    letter-spacing: -.05em;
-    line-height: 1.2em;
-    padding-bottom: .5em;
-    z-index: 100;
+    border-bottom: 1px black solid;
     width: 95%;
     margin: auto;
-    margin-top: -0.5em;
-
-}
-
-
-
-
-
-
-
-.project-title{
-    padding-top:10em;
-    font-family: 'CircularXX' !important;
-    font-size:2em;
-
-}
-
-
-.paragraph{
-    font-family: 'Test Domaine Text' !important;
-   font-size:24px;
-    letter-spacing: -.03em;
-    line-height: 1.125;
-    font-weight:200;
-   
-}
-
-
-
-
-
-
-.iframe-container{
-/*    width:100%;*/
-    margin:auto;
-/*        background-color: black;*/
-    border: none;
-/*        outline: 1px black solid;*/
-
-/*  height: 100vh;*/
-  overflow: hidden;
-
-
-}
-
-
-    /* Ensure iframe container allows scroll */
-    .iframe-container {
-/*      position: relative;*/
-    /*  width: 100vw;
-      height: 100vh;*/
-     width: 100%;
-    height: 53.8em;
-    }
-
-
-
- .floating-text-container{
-    /*width:90%;
-    margin:auto;*/
-/*    position:absolute;*/
-    margin-top:5em;
-/*    z-index:50 !important;*/
- }
-
-
-.floating-text {
-/*    color: #ffffff;*/
-    color:black;
-    font-weight: 300;
-    font-size: 3em;
-    font-family: 'Schnyder Family';
-/*    position: absolute;*/
-  width:95%;
-margin:auto;
-      /* z-index: 60; */
-    /* margin-top: -8em; */
-    font-style: italic;
-    /*width: 80%;
-    left: 0.2em;*/
-        padding-bottom: 0.4em;
-}
-
-
-#text-1, #text-2, #text-3, #text-4{
-    line-height:0.8em;
-}
-
-
-#text{
-    color:black;
-}
-
-
-
-
-
-#iframe-image {
-    width: 100%;
-    height: 100vh;
-    overflow: auto; /* Allow internal scrolling */
-    -webkit-overflow-scrolling: touch; /* Enables smooth scrolling for iOS */
-    background-color: transparent;
-  }
-
-
-  /* Floating text styling */
-  .floating-text-container {
-/*    position: absolute;*/
-   /* top: 10px;
-    left: 10px;
-    z-index: 10;*/
-  }
-
-
-
-  .floating-text a {
-    color: black;
-    font-size: 1em;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-
-
-
-
-
-
-#text-1, #text-2, #text-3, #text-4 {
-    line-height: 0.8em;
-/*    border-bottom: 1px black solid;*/
-    /* width: 100%; */
-    /* margin: auto; */
-    padding-bottom: 0.1em;
     padding-top: 0.5em;
-    }
 
-
-
-
-
-.border-bottom {
-    outline: .1px black solid;
-    width: 100%;
-    margin-top: 1.3em;
-}
-
-
-/* Moving Image Styles */
-.moving-image-container {
-  width: 1000px;
-  position: relative;
-/*  height: 150px; */
-  /* Image container height */
-  margin-top:6.1em;
-}
-
-.moving-image {
-  position: absolute;
-  animation: horizontalMove 50s linear infinite; /* Infinite horizontal movement */
-      border-bottom: 1.5px black solid;
-}
-
-@keyframes horizontalMove {
-  0% {
-    margin-left: -500px; /* Start off-screen from the left */
-  }
-  100% {
-    margin-left: -7000px; /* Move completely off-screen to the right */
-  }
-}
-
-
-
-/*aut.html*/
-
-
-
-/* Slide-up container */
-#slide-up-container {
-position: fixed;
-top: 100vh; /* Initially off-screen */
-left: 0;
-height: 100vh;
-width: 100%;
-background-color: black; /* Black background for the container */
-transition: top 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition */
-z-index:999;
-
-}
-
-/* When the container is activated */
-#slide-up-container.active {
-top: 0; /* Slide it to the top of the viewport */
-
-}
-
-/*----*/
-
-
-.close-button {
-    position: absolute;
-/*    top: 15px;*/
-/*    left: 15px;*/
-    background: none;
-    border: none;
-    color: black;
-    font-size: 44px; /* Adjust font size for a thinner look */
-    cursor: pointer;
-    z-index: 10;
-    padding: 0; /* Remove padding to make it thinner */
-    line-height: 1; /* Adjust line height */
-    width: 58px; /* Set a fixed width */
-    height: 58px; /* Set a fixed height */
-     transition: transform 0.3s ease;
-   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-   margin-top:2.5em;
-    margin-left: 0.1em;
-}
-
-.close-button:hover {
-    color: red; /* Change color on hover */
-}
-
-
-
-.close-button:hover {
-  transform: rotate(90deg); 
-  /* Rotate the 'X' on hover */
-}
-
-
-
-a{
-/*    color:pink;*/
-    text-decoration: none;
-}
-
- /* Product close button styles */
-        .product__close {
-            display: block;
-            height: 58px;
-            width: 58px;
-            position: absolute;
-            top: 7em;
-            left: 10px;
-/*            z-index: 9;*/
-            cursor: pointer;
-            transition: opacity 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
         }
 
-        .product__close-bar {
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            top: 50%;
-            background-color: #28282a;
+        .info-container {
+            opacity: 0;
+            transition: opacity 0.5s ease, height 0.5s ease;
+            height: 0;
             overflow: hidden;
-            transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
-        }
-
-        .product__close-bar:first-child {
-            transform: rotate(45deg);
-            
-        }
-
-        .product__close-bar:nth-child(2) {
-            transform: rotate(-45deg);
-            
-        }
-
-        .product__close-background {
-            display: block;
-            height: 100%;
-            position: absolute;
-            background-color: #28282a;
-            width: 100%;
-            transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
-        }
+/*            padding: 0 20px;*/
 
 
-
-    
-
-
-/*-------*/
-    /* Floating text styles */
-        .floating-text {
-            
-            cursor: pointer;
-        }
-
-
-
-
-
-
-
-
-.compartment-chair {
-    position: relative;
-/*    display: inline-block;*/
-    overflow: hidden; /* Ensures the image is cropped if it scales down */
-    text-align: left; /* Center-aligns button and paragraph */
-/*        border-bottom: 1px black solid;*/
-        padding-top:3em;
-            margin: auto;
-    width: 400px;
-
-}
-
-.chair-image {
-    width: 100%; /* Adjust as needed */
-    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Cubic Bezier effect */
-}
-
-.chair-image.shrink {
-    transform: scale(0.8); /* Adjust the scale value as needed */
-}
-
-.info-button {
-    margin-top: 10px; 
-    /* Space between image and button */
-/*    font-family: "CircularXX" !important;*/
-   /* font-family: "Shynder Family" !important;   
-    font-weight: 200;
-    font-style: italic;
-    font-size:1.8em;
-    letter-spacing: -.03em;
-    line-height: 1.125;
-    color: black !important;*/
-    text-align:left !important;
-    font-family: "Schnyder Family";
-    font-weight: 300;
-    font-size: 2.1em;
-    color: black;
-    font-style: italic;
-    line-height: 0.85em;
-    /* letter-spacing: -.2rem; */
-    margin: auto;
-    width:95%;
-    
-  
-
-}
-
-
-
-
-.info-button-compartment {
-    width:100%;
-    margin: auto;
-    /* outline: 1px pink solid; */
-/*    border-bottom: 1px black solid;*/
-    margin-top:20px;
-}
-
-
-.info-button-compartment-new-section{
-    margin:auto;
-    width:97%;
-/*    border-bottom:1px black solid;*/
-
-}
-
-button{
-background:transparent;
-border:none;
-/*border-bottom:1px black solid;*/
-color:black !important;
-}
-
-
-
-
-
-.info-container {
-/*    max-height: 0; */
-    /* Initially hidden */
+    opacity: 0;
+    transition: opacity 0.5s ease, height 0.5s ease;
     height: 0;
-    overflow: hidden; /* Prevents content from showing when hidden */
-/*    transition: max-height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); */
-    /* Transition effect for max height */
-/*    border-bottom:1px black solid;*/
-/* transition: max-height 0.5s ease-out; */
- display:block;
-  transition: max-height 0.7s ease, opacity 0.7s ease; /* Slow transitions */
-  opacity:0;
-}
-
-
-.info-container.active {
-/*    max-height: 1000px; */
-    /* Adjust this value as needed based on content size */
-    height: auto;
-    padding-bottom:2em;
-/*    transition: max-height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);*/
-/* transition: max-height 0.5s ease-out; */
-display: block;
- opacity: 1; /* Fully visible */
-  
-}
-
-
-.info-paragraph {
-    margin: 10px 0; /* Space around the paragraph */
-    font-size: 1.4em; /* Adjust font size as needed */
-    color: #333; /* Change text color as needed */
-    font-family:"Test Domaine Text" !important;
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: -.03em;
+    overflow: hidden;
+    /* padding: 0 20px; */
+    opacity: 0;
+    transition: opacity 0.5s ease, height 0.5s ease;
+    height: 0;
+    overflow: hidden;
+    /* padding: 0 20px; */
+    /* width: 95%; */
+    /* margin: auto; */
+    font-family: 'Test Domaine Text';
+    color: #333;
+    font-size: 24px;
+    font-weight: 200;
+    letter-spacing: -.05em;
     line-height: 1.125;
-/*    transition: max-height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);*/
-    
-}
+    font-style: normal;
+        }
 
-
-.br_padding{
-    margin-top:1.2em;
-}
-
-
-/*-------*/
-
-
-
-
-    /* New Section Styles */
-        .new-section {
-            margin: 50px; /* Space around the new section */
-            text-align: left; /* Center-align text in the new section */
-/*                border-bottom: 1px black solid;*/
-    width: 100%;
-    margin: auto;
+        .info-container.active {
+            opacity: 1;
+            height: auto;
+           /* padding: 20px;
+            background-color: #f9f9f9;
+            margin: 10px 0;*/
         }
 
 
-/*----*/
 
+/*project button*/
+.project-details {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 
-
-
-
-
-/* Moving Image Styles */
-.moving-image-container-2 {
-  width: 1000px;
-  position: relative;
-  height: 150px; /* Image container height */
+     opacity: 0;
+    transition: opacity 0.5s ease, height 0.5s ease;
+    height: 0;
+    overflow: hidden;
+    /* padding: 0 20px; */
+    opacity: 0;
+    transition: opacity 0.5s ease, height 0.5s ease;
+    height: 0;
+    overflow: hidden;
+    /* padding: 0 20px; */
+    /* width: 95%; */
+    /* margin: auto; */
+    font-family: 'Test Domaine Text';
+    color: #333;
+    font-size: 24px;
+    font-weight: 200;
+    letter-spacing: -.05em;
+    line-height: 1.125;
+    font-style: normal;
 }
 
-.moving-image-2 {
-  position: absolute;
-  animation: horizontalMove 50s linear infinite; /* Infinite horizontal movement */
+.project-details.active {
+    opacity: 1;
 }
 
-@keyframes horizontalMove {
-  0% {
-    margin-left: -500px; /* Start off-screen from the left */
-  }
-  100% {
-    margin-left: -7000px; /* Move completely off-screen to the right */
-  }
+.project-button-compartment {
+  cursor: pointer;
+    text-align: left;
+   
+    cursor: pointer;
+  
+    position: relative;
+  
+    font-family: 'Schnyder Family';
+    font-style: italic;
+    font-size: 2.2em;
+    font-weight: 200;
+    width: 95%;
+    margin: auto;
+
+
+    text-align: left;
+    /* margin: 10px 0; */
+    cursor: pointer;
+    /* padding: 10px; */
+    /* background-color: #f0f0f0; */
+    /* border: 1px solid #ddd; */
+    /* display: inline-block; */
+    position: relative;
+    /* transform: translateX(-50%); */
+    margin-top: 0.2em;
+    font-family: 'Schnyder Family';
+    font-style: italic;
+    font-size: 2.2em;
+    font-weight: 200;
+    border-bottom: 1px black solid;
+    width: 95%;
+    margin: auto;
+    padding-top: 0.5em;
+
 }
+
+
+
+
+
 
 
 

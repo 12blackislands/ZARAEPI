@@ -7,247 +7,173 @@ document.getElementById('hamburger').addEventListener('click', function() {
 
 
 
-
-  
-
-// --------add timing to the js
-        // Toggle info for the original compartment chair section
-const infoButtons = document.querySelectorAll('.info-button');
-const closeButton = document.querySelector('.close-button');
-const images = document.querySelectorAll('.chair-image');
-const infoContainers = document.querySelectorAll('.info-container');
-
-infoButtons.forEach((button, index) => {
-    button.addEventListener('click', function() {
-        images[index]?.classList.toggle('shrink'); // Shrink image for the corresponding section
-        const infoContainer = infoContainers[index];
-
-        if (infoContainer.classList.contains('active')) {
-            infoContainer.style.opacity = '0'; // Start fade out
-            setTimeout(() => {
-                infoContainer.classList.remove('active'); // Remove active class after fade out
-            }, 700); // Match with CSS transition duration
-        } else {
-            infoContainer.classList.add('active'); // Add active class to show
-            infoContainer.style.display = 'block'; // Show the container
-            setTimeout(() => {
-                infoContainer.style.opacity = '1'; // Fade in after displaying
-            }, 10); // Slight delay to ensure the display change takes effect
+  // Page Transitions
+        function slideUp() {
+            var transitionslideup = document.getElementById('transitionslideup');
+            transitionslideup.classList.add('active');
+            setTimeout(function() {
+                window.location.href = 'aut.html';
+            }, 800);
         }
-    });
-});
 
-closeButton.addEventListener('click', function() {
-    images.forEach(image => image.classList.remove('shrink')); // Remove shrink from all images
-    infoContainers.forEach(container => {
-        container.style.opacity = '0'; // Start fade out
-        setTimeout(() => {
-            container.classList.remove('active'); // Remove active after fade out
-        }, 700); // Match with CSS transition duration
-    });
-});
+        function slideUptwo() {
+            var transitionslideuptwo = document.getElementById('transitionslideup_two');
+            transitionslideuptwo.classList.add('active');
+            setTimeout(function() {
+                window.location.href = 'aut.html';
+            }, 800);
+        }
+
+        function slideUpthree() {
+            var transitionslideupthree = document.getElementById('transitionslideup_three');
+            transitionslideupthree.classList.add('active');
+            setTimeout(function() {
+                window.location.href = 'aut.html';
+            }, 800);
+        }
+
+        function slideUpfour() {
+            var transitionslideupfour = document.getElementById('transitionslideup_four');
+            transitionslideupfour.classList.add('active');
+            setTimeout(function() {
+                window.location.href = 'aut.html';
+            }, 800);
+        }
 
 
-// 
+
+// page transition for the logo-name
+  function handleTransitionlogo(event) {
+            event.preventDefault(); // Prevent immediate navigation
+            
+            const transition = document.querySelector('.page-transition');
+            const link = event.currentTarget.getAttribute('href');
+            
+            // Trigger the transition
+            transition.classList.add('active');
+            
+            // Wait for transition to complete before navigating
+            setTimeout(() => {
+                window.location.href = link;
+            }, 600); // Match this with your CSS transition duration
+        }
 
 
 
-          // Apply slide-up effect to all links
-        document.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', function (e) {
-                e.preventDefault(); // Prevent immediate navigation
-                const targetUrl = this.getAttribute('href'); // Get the URL to navigate to
 
-                // Activate the slide-up container
-                const slideUpContainer = document.getElementById('slide-up-container');
-                slideUpContainer.classList.add('active');
+// page transition for x-animated button
+  function handleTransition(event) {
+            const xButton = document.querySelector('.x-button');
+            const transitionContainer = document.querySelector('.transition-container');
+            
+            // Animate the X button
+            xButton.classList.add('active');
+            
+            // Enable pointer events during transition
+            transitionContainer.style.pointerEvents = 'auto';
+            
+            // Trigger the transition
+            transitionContainer.classList.add('active');
+            
+            // Wait for transition to complete before navigating
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 800);
+        }
 
-                // Wait for the slide-up effect to finish before navigating
-                setTimeout(function () {
-                    window.location.href = targetUrl;
-                }, 600); // Delay to match the CSS transition duration (0.6s)
-            });
+        // Add hover effect that follows mouse position
+        document.querySelector('.x-button').addEventListener('mousemove', (e) => {
+            const xButton = e.currentTarget;
+            const rect = xButton.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            // Calculate rotation based on mouse position
+            const multiplier = 10; // Adjust this value to control the rotation intensity
+            const rotateX = -y / rect.height * multiplier;
+            const rotateY = x / rect.width * multiplier;
+            
+            xButton.style.transform = `perspective(300px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        // Reset transform on mouse leave
+        document.querySelector('.x-button').addEventListener('mouseleave', (e) => {
+            e.currentTarget.style.transform = 'perspective(300px) rotateX(0) rotateY(0)';
         });
 
 
 
-// document.getElementById('slide-up-container').classList.add('active');
 
 
-function slideUp() {
-    var blackslideup = document.getElementById('blackslideup');
-    
-    // Add the 'active' class to trigger the slide-up animation
-    blackslideup.classList.add('active');
+// image slider, info problem statement
+ const infoButton = document.querySelector('.info-button-compartment');
+        const techSlideshow = document.querySelector('.tech-slideshow');
+        const infoContainer = document.querySelector('.info-container');
+        // const closeButtonTopLeft = document.querySelector('.close-button-top-left');
+        // const pageTransition = document.querySelector('.page-transition');
 
-    // After the slide-up animation is complete (800ms), redirect to the next page
-    setTimeout(function() {
-        window.location.href = 'aut.html'; // Redirect to the next page after animation
-    }, 800); // Time in milliseconds matches the CSS transition duration
-}
+        // Info button functionality
+        infoButton.addEventListener('click', function() {
+            const isActive = infoContainer.classList.contains('active');
 
+            if (isActive) {
+                infoContainer.style.opacity = '0';
+                setTimeout(() => {
+                    infoContainer.classList.remove('active');
+                    infoContainer.style.height = '0';
+                    techSlideshow.classList.remove('shrunk');
+                }, 500);
+            } else {
+                infoContainer.classList.add('active');
+                infoContainer.style.height = 'auto';
+                setTimeout(() => {
+                    infoContainer.style.opacity = '1';
+                }, 10);
 
+                techSlideshow.classList.add('shrunk');
+            }
+        });
 
+     
+// Select the project elements
+const projectButton = document.querySelector('.project-button-compartment');
+const projectDetails = document.querySelector('.project-details');
 
-
-function slideUptwo() {
-    var blackslideuptwo = document.getElementById('blackslideup_two');
-    
-    // Add the 'active' class to trigger the slide-up animation
-    blackslideuptwo.classList.add('active');
-
-    // After the slide-up animation is complete (800ms), redirect to the next page
-    setTimeout(function() {
-        window.location.href = 'closeproduct.html'; // Redirect to the next page after animation
-    }, 800); // Time in milliseconds matches the CSS transition duration
-}
-
-
-
-function slideUpthree() {
-    var blackslideupthree = document.getElementById('blackslideup_three');
-    
-    // Add the 'active' class to trigger the slide-up animation
-    blackslideupthree.classList.add('active');
-
-    // After the slide-up animation is complete (800ms), redirect to the next page
-    setTimeout(function() {
-        window.location.href = 'aut.html'; // Redirect to the next page after animation
-    }, 800); // Time in milliseconds matches the CSS transition duration
-}
-
-
-
-
-function slideUpfour() {
-    var blackslideupfour = document.getElementById('blackslideup_four');
-    
-    // Add the 'active' class to trigger the slide-up animation
-    blackslideupfour.classList.add('active');
-
-    // After the slide-up animation is complete (800ms), redirect to the next page
-    setTimeout(function() {
-        window.location.href = 'aut.html'; // Redirect to the next page after animation
-    }, 800); // Time in milliseconds matches the CSS transition duration
-}
-
-
-
-
-// function toggleInfo() {
-//     const infoContainer = document.querySelector('.new-info-container');
-//     infoContainer.classList.toggle('active');
-
-//     // Adjust display style for dropdown effect
-//     if (infoContainer.classList.contains('active')) {
-//         infoContainer.style.display = 'block'; // Show the container
-//     } else {
-//         setTimeout(() => {
-//             infoContainer.style.display = 'none'; // Hide it after the slide-up effect
-//         }, 500); // Match this duration with your CSS transition
-//     }
-// }
-
-
-// testing dropdown
-function toggleDropdown() {
-    const dropdownContent = document.querySelector('.dropdown-content');
-    const isActive = dropdownContent.classList.toggle('active');
+// Project button toggle functionality
+projectButton.addEventListener('click', function() {
+    const isActive = projectDetails.classList.contains('active');
 
     if (isActive) {
-        dropdownContent.style.display = 'block'; // Show the container
+        // Hide the project details
+        projectDetails.style.opacity = '0';
         setTimeout(() => {
-            dropdownContent.style.opacity = '1'; // Fade in
-        }, 10); // Slight delay to trigger the CSS transition
+            projectDetails.classList.remove('active');
+            projectDetails.style.height = '0';
+        }, 500); // Match this timing with your CSS transition
     } else {
-        dropdownContent.style.opacity = '0'; // Fade out
-        setTimeout(() => {
-            dropdownContent.style.display = 'none'; // Hide it after the transition
-        }, 700); // Match this duration with your CSS transition for a slower effect
-    }
-}
-
-
-
-
-// jquery- always put your jquery source first above any other js
-// slidable container testing
-$(document).ready(function() {
-    var isOpen = false; // State variable to track open/close
-
-    $('.slide-button').on('click', function() {
-        var description = $('.description-container');
-
-        if (!isOpen) {
-            description.slideDown('slow', function() {
-                description.addClass('active'); // Add active class after sliding down
-            });
-            isOpen = true;
-        } else {
-            description.removeClass('active'); // Remove active class before sliding up
-            description.slideUp('slow');
-            isOpen = false;
-        }
-    });
-});
-
-
-
-
-
-
-// info-toggle testing
-$(document).ready(function() {
-    var isOpen = false; // State variable to track open/close
-
-    $('.info-toggle-button').on('click', function() {
-        var description = $('.info-description-container');
-
-        if (!isOpen) {
-            description.css('display', 'block'); // Show the container first
-            setTimeout(function() {
-                description.addClass('active'); // Add active class for transition
-            }, 10); // Delay to allow display to take effect
-            isOpen = true;
-        } else {
-            description.removeClass('active'); // Remove active class to start slide-up
-            setTimeout(function() {
-                description.css('display', 'none'); // Hide after slide-up completes
-            }, 500); // Match this duration with the CSS transition
-            isOpen = false;
-        }
-    });
-});
-
-
-
-
-// info section container testing - i prefer this one with the slideup effect
-$(document).ready(function() {
-    var isOpen = false; // State variable to track open/close
-
-    $('.info-toggle-btn').on('click', function() {
-        var content = $('.info-content');
-        var titleSection = $('.title-section');
-
-        if (!isOpen) {
-            content.css('display', 'block'); // Show the content first
-            setTimeout(function() {
-                content.addClass('active'); // Add active class for transition
-                titleSection.css('max-height', '50px'); // Shrink the title section
-            }, 10); // Delay to allow display to take effect
-            isOpen = true;
-        } else {
-            content.removeClass('active'); // Remove active class to start slide-up
-            setTimeout(function() {
-                content.css('display', 'none'); // Hide after slide-up completes
-                titleSection.css('max-height', '100px'); // Restore the title section height
-            }, 500); // Match this duration with the CSS transition
-            isOpen = false;
-        }
-    });
-});
-
-   
-
+        // Show the project details
+        projectDetails.classList.add('active');
+        projectDetails.style.height = 'auto';
+        const height = projectDetails.scrollHeight + 'px';
+        projectDetails.style.height = '0';
         
+        // Trigger reflow
+        projectDetails.offsetHeight;
+        
+        projectDetails.style.height = height;
+        setTimeout(() => {
+            projectDetails.style.opacity = '1';
+        }, 10);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
