@@ -687,6 +687,34 @@ color: black !important;
 
 
  /* Existing styles , image slider, info problem statement*/
+
+ /* Mobile-first responsive design */
+@media screen and (max-width: 480px) {
+  .mover {
+    display: inline-flex;
+    flex-wrap: nowrap;
+  }
+  
+  .mover img {
+    height: 150px;
+    width: auto;
+    min-width: 0;
+    object-fit: contain;
+    flex: 0 0 auto;
+    -webkit-transform: translateZ(0); /* Hardware acceleration for mobile */
+    transform: translateZ(0);
+  }
+  
+  .tech-slideshow {
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    overflow-x: hidden;
+  }
+}
+
+
+
+
+
         .tech-slideshow {
 /*            height: 600px;*/
 height:400px;
@@ -699,8 +727,11 @@ width:auto;
             transform: translate3d(0, 0, 0);
             transition: all 0.5s ease;
 
-            margin-top:6em;
+/*            margin-top:6em;*/
             width: max-content;
+
+             margin: 6em 0 0 0 ;
+  padding: 0;
 
 
         }
@@ -715,17 +746,27 @@ width:auto;
 
         .tech-slideshow img {
             height: 100%;
-            width: auto;
+            /*width: auto;
             max-width: none;
             object-fit: cover;
-            flex: 0 0 auto;
+            flex: 0 0 auto;*/
             transition: all 0.5s ease;
 
-        }
+display: block;
+/*  height: 300px;*/
+  width: auto;
+  max-width: none; /* Prevents max-width constraints */
+  object-fit: contain;
+  flex: 0 0 auto; 
+
+}
 
         .tech-slideshow .mover {
             animation: moveSlideshow 30s linear infinite;
              width: max-content;
+              display: inline-flex;
+               gap: 0;
+                position: relative;
         }
 
      /*   @keyframes moveSlideshow {

@@ -173,15 +173,77 @@ projectButton.addEventListener('click', function() {
 
 // $('.collapse').collapse()
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     const mover = document.querySelector('.mover');
+//     // Clone all images and append them to ensure smooth infinite scroll
+//     const images = mover.querySelectorAll('img');
+//     images.forEach(img => {
+//         const clone = img.cloneNode(true);
+//         mover.appendChild(clone);
+//     });
+// });
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const mover = document.querySelector('.mover');
-    // Clone all images and append them to ensure smooth infinite scroll
-    const images = mover.querySelectorAll('img');
-    images.forEach(img => {
-        const clone = img.cloneNode(true);
-        mover.appendChild(clone);
-    });
-});
+    const images = Array.from(mover.querySelectorAll('img'));
+    
+    // Function to handle image loading
+    function handleImageLoad(img) {
+        return new Promise((resolve) => {
+            if (img.complete) {
+                resolve();
+            } else {
+                img.onload = () => resolve();
+                img.onerror = () => {
+                    // If image fails to load, set a minimum width to maintain spacing
+                    img.style.minWidth = '200px';
+                    resolve();
+                };
+            }
+        });
+    }
 
+    // Function to clone and append images
+    function cloneImages() {
+        // Clone each image twice to ensure smooth infinite scroll
+        for (let i = 0; i < 2; i++) {
+            images.forEach(img => {
+                const clone = img.cloneNode(true);
+                // Ensure proper loading of cloned images
+                handleImageLoad(clone).then(() => {
+                    mover.appendChild(clone);
+                });
+            });
+        }
+    }
+
+    // Load all original images first
+    Promise.all(images.map(img => handleImageLoad(img)))
+        .then(() => {
+            cloneImages();
+        });
+
+    // Reset animation when it completes
+    mover.addEventListener('animationend', () => {
+        requestAnimationFrame(() => {
+            mover.style.animation = 'none';
+            mover.offsetHeight; // Trigger reflow
+            mover.style.animation = 'moveSlideshow 30s linear infinite';
+        });
+    });
+
+    // Detect if running on mobile device
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+        // Optimize for mobile performance
+        mover.style.webkitBackfaceVisibility = 'hidden';
+        mover.style.backfaceVisibility = 'hidden';
+        
+        // Adjust animation duration for mobile
+        mover.style.animation = 'moveSlideshow 40s linear infinite';
+    }
+});
 
 
