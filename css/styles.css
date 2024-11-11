@@ -410,6 +410,7 @@ body:before {
 
 
 
+
  /* Project Sections */
 .project_section {
 /*    padding: 40px;*/
@@ -699,6 +700,9 @@ width:auto;
             transition: all 0.5s ease;
 
             margin-top:6em;
+            width: max-content;
+
+
         }
 
         .tech-slideshow > div {
@@ -706,6 +710,7 @@ width:auto;
             display: flex;
             white-space: nowrap;
             transition: all 0.5s ease;
+             width: max-content;
         }
 
         .tech-slideshow img {
@@ -715,27 +720,69 @@ width:auto;
             object-fit: cover;
             flex: 0 0 auto;
             transition: all 0.5s ease;
+
         }
 
         .tech-slideshow .mover {
-            animation: moveSlideshow 6s linear infinite;
+            animation: moveSlideshow 30s linear infinite;
+             width: max-content;
         }
 
-        @keyframes moveSlideshow {
+     /*   @keyframes moveSlideshow {
             0% { transform: translateX(0); }
             100% { transform: translateX(-100%); }
-        }
+        }*/
 
-        .tech-slideshow.shrunk {
-/*            height: 300px;*/
-height:200px;
+/*        @keyframes moveSlideshow {
+  0% {
+    margin-left: -500px; 
+  }
+  100% {
+    margin-left: -4900px; 
+  }
+}
+*/
+
+@keyframes moveSlideshow {
+  100% { 
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+/*can use this one, or change to the length of the photo to -200% up to 700% maybe
+and then change the speed according to the length of the photos from tech-slideshow .mover {
+    animation: moveSlideshow 20s linear infinite;*/
+/*        @keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+*/
+
+.tech-slideshow.shrunk {
+/*      height: 300px;*/
+        height:200px;
 /*            width: 400px;*/
-width:auto;
+        width:auto;
+        display: flex;
+        white-space: nowrap;
         }
 
-        .tech-slideshow.shrunk img {
-            height: 100%;
-        }
+
+
+
+.tech-slideshow.shrunk img {
+        height: 100%;
+       
+        display: flex;
+        white-space: nowrap;
+}
 
         .info-button-compartment {
             /*text-align: center;
@@ -841,6 +888,7 @@ width:auto;
 
 .project-details.active {
     opacity: 1;
+/*    margin-bottom:200px;*/
 }
 
 .project-button-compartment {
@@ -876,7 +924,7 @@ width:auto;
     border-bottom: 1px black solid;
     width: 95%;
     margin: auto;
-    padding-top: 0.5em;
+/*    padding-top: 0.5em;*/
 
 }
 

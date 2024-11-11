@@ -135,7 +135,7 @@ document.getElementById('hamburger').addEventListener('click', function() {
         });
 
      
-// Select the project elements
+// Select the project elements//project-button-comp and project details
 const projectButton = document.querySelector('.project-button-compartment');
 const projectDetails = document.querySelector('.project-details');
 
@@ -171,9 +171,17 @@ projectButton.addEventListener('click', function() {
 
 
 
+// $('.collapse').collapse()
 
-
-
+document.addEventListener('DOMContentLoaded', function() {
+    const mover = document.querySelector('.mover');
+    // Clone all images and append them to ensure smooth infinite scroll
+    const images = mover.querySelectorAll('img');
+    images.forEach(img => {
+        const clone = img.cloneNode(true);
+        mover.appendChild(clone);
+    });
+});
 
 
 
