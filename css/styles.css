@@ -991,6 +991,15 @@ and then change the speed according to the length of the photos from tech-slides
     } */
 
 
+    /* Tablet views */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .mover img {
+    height: 200px;
+  }
+}
+
+
+
     /*for tablet/small laptop - inclusive*/
 @media only screen and (min-width:60em) {
     /* body:before {
@@ -1002,6 +1011,13 @@ and then change the speed according to the length of the photos from tech-slides
         top: 0;
         z-index: 1000;
     } */
+
+/* Larger screens */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .mover img {
+    height: 250px;
+  }
+}
 
 
     /*for destop - inclusive*/
