@@ -247,3 +247,49 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+// Add this to your existing script.js file
+document.addEventListener('DOMContentLoaded', function() {
+  const ticker = document.querySelector('.ticker');
+  const tickerItems = ticker.querySelectorAll('.ticker-item');
+  
+  // Calculate the original width of text content
+  let originalWidth = 0;
+  tickerItems.forEach(item => {
+    originalWidth += item.offsetWidth;
+  });
+  
+  // Create enough duplicates to ensure no gaps
+  const screenWidth = window.innerWidth;
+  const duplicatesNeeded = Math.ceil((screenWidth * 2) / originalWidth) + 2;
+  
+  // Remove existing duplicates first (in case function runs multiple times)
+  const initialItemCount = tickerItems.length;
+  
+  // Add new duplicates
+  for (let i = 0; i < duplicatesNeeded; i++) {
+    for (let j = 0; j < initialItemCount; j++) {
+      const clone = tickerItems[j].cloneNode(true);
+      ticker.appendChild(clone);
+    }
+  }
+  
+  // Adjust animation speed based on content length
+  const newTotalWidth = ticker.scrollWidth;
+  const baseDuration = 30; // Base duration in seconds
+  const calculatedDuration = (newTotalWidth / screenWidth) * baseDuration / 2;
+  
+  // Set the animation duration dynamically
+  ticker.style.animationDuration = `${calculatedDuration}s`;
+  
+  // Reset animation when it completes for smoother looping
+  ticker.addEventListener('animationiteration', () => {
+    requestAnimationFrame(() => {
+      ticker.style.animationPlayState = 'running';
+    });
+  });
+});
+
+
+
+

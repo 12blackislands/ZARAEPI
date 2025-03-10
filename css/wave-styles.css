@@ -1,0 +1,156 @@
+/* Grid Box Wave Effect Styles */
+.wave-grid-container {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+.wave-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.wave-box {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height: 320px;
+    animation: float 3s infinite alternate cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.wave-box:hover {
+    transform: scale(1.03);
+    z-index: 10;
+}
+
+/* Each box floats with different timing for wave effect */
+#wave-box1.box-wave-1 {
+    animation-delay: 0s;
+}
+
+#wave-box2.box-wave-2 {
+    animation-delay: 0.5s;
+}
+
+#wave-box3.box-wave-3 {
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+.wave-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wave-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+.wave-grid-title {
+    text-align: center;
+    color: black;
+    margin-bottom: 40px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+/* Box-specific wave effect */
+.box-wave {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-size: 100% 100%;
+    animation: box-wave 3s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+/* Unique styles for each box wave */
+.box-wave-1 .box-wave {
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 600 40" xmlns="http://www.w3.org/2000/svg"><path d="M0,20 C150,40 300,0 450,20 C525,30 575,15 600,10 L600,40 L0,40 Z" fill="rgba(74, 134, 232, 0.3)"/></svg>');
+    animation-duration: 3s;
+}
+
+.box-wave-2 .box-wave {
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 600 40" xmlns="http://www.w3.org/2000/svg"><path d="M0,10 C100,30 200,5 300,25 C400,5 500,30 600,15 L600,40 L0,40 Z" fill="rgba(92, 198, 235, 0.3)"/></svg>');
+    animation-duration: 4s;
+}
+
+.box-wave-3 .box-wave {
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 600 40" xmlns="http://www.w3.org/2000/svg"><path d="M0,15 C150,5 300,30 450,10 C525,20 575,5 600,15 L600,40 L0,40 Z" fill="rgba(120, 158, 235, 0.3)"/></svg>');
+    animation-duration: 5s;
+}
+
+@keyframes box-wave {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Wave transition overlay */
+.wave-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.wave-transition.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.wave-transition-text {
+    color: white;
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    font-family: 'Space Mono', monospace;
+}
+
+.wave-transition.active .wave-transition-text {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}

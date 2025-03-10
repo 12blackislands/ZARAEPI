@@ -95,6 +95,29 @@
 
 
 
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
 
 
 
@@ -123,6 +146,9 @@ body {
     top: 0;
     left: 0;
     transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Cubic-bezier transition */
+
+  scroll-behavior: smooth;
+
 }
 
 
@@ -157,6 +183,16 @@ a:active {
 body {
 /*    font-family: "CircularStd" !important;*/
     overflow-x: hidden;
+/*for ticker*/
+   /* margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Space Mono, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;*/
 }
 
 
@@ -297,19 +333,27 @@ body:before {
 
 .menu-group{
     padding-top:7em;
+    text-align: left;
+    padding-left: 1em;
 }
 
 .menu-item a, .menu-item a:hover, .menu-item a:active, .menu-item a:focus {
 /*  background-color: rgba(0, 0, 0, 0);*/
   color: black;
   font-weight: 300;
-  font-size: 5em;
- font-family:'Schnyder Family' ;
+ font-size:2.2em;
+/*  font-size: 5em;*/
+/* font-family:'Schnyder Family' ;*/
+  font-family:"Space Mono";
  border:none;
  text-decoration:none;
- font-style:italic;
- line-height:1em;
- letter-spacing:-.2rem;
+/* font-style:italic;*/
+font-style: normal;
+/* line-height:1.1em;*/
+ line-height:1.5em;
+ letter-spacing:-.1rem;
+
+
 
 }
 
@@ -367,18 +411,21 @@ body:before {
 
 .logo-name{
     width: 5em;
-    font-size: 2.3em;
+    font-size: 1.5em;
     color: black;
-    font-family: 'Schnyder Family';
+/*    font-family: 'Schnyder Family';*/
+     font-family:"Space Mono";
 /*    font-family: 'BradfordLLTrialWeb-Light';*/
 /*    font-family:CircularXX;*/
-    font-style: italic;
+    font-style: normal;
     font-weight: 300;
     line-height: 0.8em;
     padding-top: 1.2em;
     position:fixed;
 /*    z-index:10;*/
     transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+/*     letter-spacing:-.1rem;*/
+
 }
 
 
@@ -406,6 +453,57 @@ body:before {
     margin-left: -7000px; /* Move completely off-screen to the right */
   }
 }
+
+
+/* Ticker Styles */
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+  padding: 10px 0;
+/*  position: fixed;*/
+  position: absolute;
+/*  bottom: 0;*/
+  left: 0;
+/*  z-index: 90;*/
+   z-index: 10;
+  border-top: 1px solid white;
+  margin-top:5.9em;
+}
+
+.ticker {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: ticker-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.ticker-item {
+  display: inline-block;
+  font-family: "Space Mono", monospace;
+  font-weight: 300;
+  font-size: 1em;
+  color: white;
+  padding-right: 0; /* Removed padding that creates gaps */
+  margin: 0; /* Ensure no margins */
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Only move half the distance */
+  }
+}
+
+/* Adjust footer margin to accommodate fixed ticker */
+.footer-background-color {
+  margin-bottom: 3em;
+}
+
+
+
 
 
 
@@ -438,11 +536,12 @@ body:before {
     margin-bottom: 16px;*/
 /*    font-weight: bold;*/
 
-     font-family: "Schnyder Family";
-    font-weight: 300;
-    font-size:3em;
+/*     font-family: "Schnyder Family";*/
+      font-family:"Space Mono";
+    font-weight: 700;
+    font-size:1.2em;
     color:black;
-    font-style:italic;
+/*    font-style:italic;*/
     line-height:0.85em;
 /*    letter-spacing:-.2rem;*/
     width:95%;
@@ -454,12 +553,14 @@ body:before {
 /*color: #666;
 max-width: 600px;*/
 
-font-size: 24px;
+font-size: 16px;
 color: #333;
-font-family: "Test Domaine Text" !important;
-font-weight: 200;
+/*font-family: "Test Domaine Text" !important;*/
+ font-family:"Space Mono";
+font-weight: 300;
 font-style: normal;
-letter-spacing: -.05em;
+/*letter-spacing: -.05em;*/
+letter-spacing: -0.5px;
 line-height: 1.125;
 }
 
@@ -508,7 +609,8 @@ margin-top: 1.3em;
 
 /*footer*/
 .footer-background-color{
-    background-color:#03FF5B;
+/*    background-color:#03FF5B;*/
+background-color:black;
     overflow: hidden;
     width: 100%;
     margin: auto;
@@ -525,11 +627,12 @@ margin-top: 1.3em;
 }
 
 .contact{
-    color:black;
+    color:white;
 /*       font-family: 'Schnyder Family'; */
 /*       font-family: 'Euclid Circular A Trial';*/
-       font-family:'Test Domaine Text' !important;
-     font-size:24px;
+/*       font-family:'Test Domaine Text' !important;*/
+        font-family:"Space Mono";
+     font-size:22px;
      padding-top:4em;
      font-weight:200;
 /*      letter-spacing: .02em;*/
@@ -542,34 +645,35 @@ margin-top: 1.3em;
 
 
 #email{
-    color:black;
+    color:white;
 /*       font-family: 'Schnyder Family'; */
-       font-family: 'Test Domaine Text' !important;
-     font-size:24px;
+/*       font-family: 'Test Domaine Text' !important;*/
+        font-family:"Space Mono";
+     font-size:22px;
      padding-top:1em;
      font-weight:200;
 /*      letter-spacing: .02em;  */
       letter-spacing: -.05em;
 /*      line-height:0.8em;*/
 text-decoration:underline;
-color: black !important;
+color:white !important;
 /*font-weight:400;*/
 
 
 }
 
 #email a, .email a{
-    color:black !important;
+    color:white !important;
 }
 
 
 #behance, .behance a{
-    color:black !important;
+    color:white !important;
     text-decoration:underline;
 }
 
 .email-link, .email{
-    color:black!important;
+    color:white!important;
 }
 
 
@@ -849,7 +953,8 @@ and then change the speed according to the length of the photos from tech-slides
     position: relative;
     /* transform: translateX(-50%); */
     margin-top: 0.2em;
-    font-family: 'Schnyder Family';
+/*    font-family: 'Schnyder Family';*/
+     font-family:"Space Mono";
     font-style: italic;
     font-size: 2.2em;
     font-weight: 200;
@@ -880,7 +985,8 @@ and then change the speed according to the length of the photos from tech-slides
     /* padding: 0 20px; */
     /* width: 95%; */
     /* margin: auto; */
-    font-family: 'Test Domaine Text';
+/*    font-family: 'Test Domaine Text';*/
+     font-family:"Space Mono";
     color: #333;
     font-size: 24px;
     font-weight: 200;
@@ -918,7 +1024,8 @@ and then change the speed according to the length of the photos from tech-slides
     /* padding: 0 20px; */
     /* width: 95%; */
     /* margin: auto; */
-    font-family: 'Test Domaine Text';
+/*    font-family: 'Test Domaine Text';*/
+     font-family:"Space Mono";
     color: #333;
     font-size: 24px;
     font-weight: 200;
@@ -940,7 +1047,8 @@ and then change the speed according to the length of the photos from tech-slides
   
     position: relative;
   
-    font-family: 'Schnyder Family';
+/*    font-family: 'Schnyder Family';*/
+     font-family:"Space Mono";
     font-style: italic;
     font-size: 2.2em;
     font-weight: 200;
@@ -958,7 +1066,8 @@ and then change the speed according to the length of the photos from tech-slides
     position: relative;
     /* transform: translateX(-50%); */
     margin-top: 0.2em;
-    font-family: 'Schnyder Family';
+/*    font-family: 'Schnyder Family';*/
+     font-family:"Space Mono";
     font-style: italic;
     font-size: 2.2em;
     font-weight: 200;
