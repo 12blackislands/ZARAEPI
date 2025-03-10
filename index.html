@@ -1,52 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>ZARA__EPIFANTSEVA__DESIGN__DEVELOPMENT</title>
-	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/stylesheet.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZARA__EPIFANTSEVA__DESIGN__DEVELOPMENT</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/wave-styles.css">
 </head>
 <body>
-	<!-- menu container -->
-<div class="menu-container">
+    <!-- menu container -->
+    <div class="menu-container">
         <div class="hamburger" id="hamburger">
             <span></span>
-			<span></span>
-			<span></span>
+            <span></span>
+            <span></span>
         </div>
         <div class="dropdown" id="dropdown">
             <ul class="menu-group">
-            	<li class="menu-item"><a href="#" data-to="" class="menu-link">HOME</a></li>
-				<li class="menu-item"><a href="#" data-to="" class="menu-link">WORK</a></li>
-				<li class="menu-item"><a href="#" data-to="" class="menu-link">CONTACT</a></li>
-				<li class="menu-item"><a href="#" data-to="" class="menu-link">ABOUT</a></li>
+                <li class="menu-item"><a href="#" data-to="" class="menu-link">Home</a></li>
+                <li class="menu-item"><a href="#" data-to="" class="menu-link">Work</a></li>
+                <li class="menu-item"><a href="#" data-to="" class="menu-link">Contact</a></li>
+                <li class="menu-item"><a href="#" data-to="" class="menu-link">About</a></li>
             </ul>
         </div>
     </div>
 
+    <!-- header/logo name/designer name container --> 
+    <div class="logo-container">    
+        <div class="logo-background-color">
+            <div class="logo-section">
+                <div class="logo-name"><a href="index.html">ZARA EPIFANTSEVA</a></div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Ticker section -->
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <div class="ticker-item">USER EXPERIENCE DESIGN • PRODUCT DESIGN • UI DESIGN • HUMAN-CENTERED DESIGN • DIGITAL STRATEGY • DESIGN THINKING • DOUBLE DIAMOND • DESIGN SYSTEMS •&nbsp;</div>
+        <div class="ticker-item">USER EXPERIENCE DESIGN • PRODUCT DESIGN • UI DESIGN • HUMAN-CENTERED DESIGN • DIGITAL STRATEGY • DESIGN THINKING • DOUBLE DIAMOND • DESIGN SYSTEMS •&nbsp;</div>
+      </div>
+    </div>
 
-<!-- header/logo name/designer name container --> 
-<div class="logo-container">    
-	<div class="logo-background-color">
-		<div class="logo-section">
-			<div class="logo-name"><a href="index.html">ZARAEPIFANTSEVA</a></div>
-		</div>
-	</div>
-</div>
+    <!-- Wave Grid Section -->
+    <div class="wave-grid-container">
+        <div class="wave-grid-title">FEATURED PROJECTS</div>
+        
+        <div class="wave-grid">
+            <div id="wave-box1" class="wave-box box-wave-1">
+                <img src="/api/placeholder/400/320" alt="AUT Project">
+                <div class="wave-caption">AUT: Reimagining Learning Experience</div>
+                <div class="box-wave"></div>
+            </div>
+            
+            <div id="wave-box2" class="wave-box box-wave-2">
+                <img src="/api/placeholder/400/320" alt="Fonterra Project">
+                <div class="wave-caption">Fonterra: E-Commerce Platform</div>
+                <div class="box-wave"></div>
+            </div>
+            
+            <div id="wave-box3" class="wave-box box-wave-3">
+                <img src="/api/placeholder/400/320" alt="UoA Project">
+                <div class="wave-caption">University of Auckland: 3D Bioengineering</div>
+                <div class="box-wave"></div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Wave transition overlay -->
+    <div class="wave-transition">
+        <!-- <div class="wave-transition-text">zara epifantseva</div> -->
+         <div class="wave-transition-text">loading...</div>
+    </div>
 
-
-<!-- moving image -->
-<div class="moving-image-container">
-  <img src="./image/mobile-loop.png" class="moving-image" alt="Moving Image">
-</div>
-
-
-
-
-  <!-- Projects -->
+    <!-- Projects -->
     <div class="project_section" onclick="slideUp()">
         <div class="project-main-title">
             AUCKLAND UNIVERSITY OF TECHNOLOGY
@@ -57,8 +89,6 @@
         <div class="border-bottom"></div>
     </div>
     <div id="transitionslideup"></div>
-
-
 
     <div class="project_section container" onclick="slideUptwo()">
         <div class="project-main-title">
@@ -71,10 +101,7 @@
     </div>
     <div id="transitionslideup_two"></div>
 
-
-
-
- <div class="project_section container" onclick="slideUpthree()">
+    <div class="project_section container" onclick="slideUpthree()">
         <div class="project-main-title">
             UNIVERSITY OF AUCKLAND
             <div class="project-main-paragraph">
@@ -85,10 +112,6 @@
         <div class="border-bottom"></div>
     </div>
     <div id="transitionslideup_three"></div>
-
-
-
-
 
     <div class="project_section container" onclick="slideUpfour()">
         <div class="project-main-title">
@@ -101,32 +124,21 @@
     </div>
     <div id="transitionslideup_four"></div>
 
+    <!-- footer -->
+    <footer>
+        <div class="footer-background-color">
+            <div class="footer-section">
+                <div class="contact"><a href="#" id="behance" class="behance">Behance.</a><br>Privacy Policy.<br>Copyright 2024.<br>Auckland, New Zealand.<br>Melbourne, Australia.</div>
+                <div class="email" id="email"><a href="mailto:zara.epifantseva@outlook.com" class="email-link">Say hello</a></div>
+                <div class="contact">Website designed and developed by Zara Epifantseva. </div>
+            </div>
+        </div>
+    </footer>
 
-
-
-<!-- footer -->
-<footer>
-	<div class="footer-background-color">
-		<div class="footer-section">
-			<div class="contact"><a href="#" id="behance" class="behance">Behance.</a><br>Privacy Policy.<br>Copyright 2024.<br>Auckland, New Zealand.<br>Melbourne, Australia.</div>
-			<div class="email" id="email"><a href="mailto:zara.epifantseva@outlook.com" class="email-link">Say hello</a></div>
-			<div class="contact">Website designed and developed by Zara Epifantseva. </div>
-		</div>
-	</div>
-</footer>
-
-
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.3/popup.min.js"></script>
-<script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.3/popup.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/wave-script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
